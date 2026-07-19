@@ -1,0 +1,28 @@
+# Madame Wedding Design — robots.txt
+# AI assistants are welcome; the admin area is not public.
+
+User-agent: *
+Disallow: /admin/
+Allow: /
+
+User-agent: GPTBot
+Disallow: /admin/
+Allow: /
+
+User-agent: ClaudeBot
+Disallow: /admin/
+Allow: /
+
+User-agent: Claude-Web
+Disallow: /admin/
+Allow: /
+
+User-agent: PerplexityBot
+Disallow: /admin/
+Allow: /
+
+User-agent: Google-Extended
+Disallow: /admin/
+Allow: /
+
+Sitemap: https://madamewedding.design/sitemap.xml

@@ -1,0 +1,31 @@
+{
+  "stats": [
+    "7 editions of Vogue",
+    "20+ press features",
+    "15 Best Wedding Planners in Europe — The Wed",
+    "Top 5 Paris & Top 10 France — Wezoree"
+  ],
+  "logos": [
+    { "name": "Vogue", "url": "https://www.vogue.co.uk/gallery/vintage-chanel-wedding-dress-paris", "img": "assets/img/logos-press/vogue.svg" },
+    { "name": "Martha Stewart Weddings", "url": "https://www.marthastewart.com/8043718/paris-civil-ceremony-tropical-reception-alainm", "img": "assets/img/logos-press/martha-stewart-weddings.svg" },
+    { "name": "Brides", "url": "https://www.brides.com/opulent-intimate-wedding-paris-7504998", "img": "assets/img/logos-press/brides.svg" },
+    { "name": "Style Me Pretty", "url": "https://www.stylemepretty.com/2026/06/11/crystal-chandeliers-and-crimson-blooms-set-the-tone-for-this-chianti-wedding-weekend/", "img": "assets/img/logos-press/style-me-pretty.svg" },
+    { "name": "Carats & Cake", "url": "https://caratsandcake.com/articles/french-wedding-making-of-cindy-and-franklyn", "img": "assets/img/logos-press/carats-and-cake.svg" },
+    { "name": "Over The Moon", "url": "https://blog.overthemoon.com/weddings/aimee-connolly-and-john-greene-in-france/", "img": "assets/img/logos-press/over-the-moon.svg" },
+    { "name": "Wedding Sparrow", "url": "https://weddingsparrow.com/article/how-to-have-the-french-destination-wedding-you-always-wanted", "img": "assets/img/logos-press/wedding-sparrow.svg" },
+    { "name": "The Wed", "url": "https://thewed.com/magazine/15-best-wedding-planners-in-europe", "img": "assets/img/logos-press/the-wed.svg" }
+  ],
+  "authority": [
+    { "name": "The Wed — 15 Best Wedding Planners in Europe", "url": "https://thewed.com/magazine/15-best-wedding-planners-in-europe" },
+    { "name": "Wezoree — Top 5 Planners in Paris", "url": "https://wezoree.com/inspiration/top-5-planners-paris/" },
+    { "name": "Wezoree — Top 10 Planners in France", "url": "https://wezoree.com/inspiration/top-10-planners-in-france/" },
+    { "name": "Wezoree — Elevating Love: the Madame Wedding Design story", "url": "https://wezoree.com/interviews/planners/elevating-love-the-madame-wedding-design-story/" },
+    { "name": "Brides — 160+ Black-Owned Wedding Businesses", "url": "https://www.brides.com/black-owned-wedding-businesses-4846896" },
+    { "name": "Vogue US — Makeda Saggau-Sackey's wedding", "url": "https://www.vogue.com/slideshow/makeda-saggau-sackey-glamazon-diaries-wedding" }
+  ],
+  "mediaKit": {
+    "email": "hello@madamewedding.design",
+    "pdf": "",
+    "contactLine": "Press enquiries: hello@madamewedding.design — media kit and imagery on request."
+  }
+}

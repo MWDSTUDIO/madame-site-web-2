@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media &amp; Alt Text — Admin | Madame Wedding Design</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/assets/brand/seal.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="rule"></div><div class="rule thin"></div>
+  <a class="brand" href="/">Madame Wedding Design</a>
+  <p class="tag">Admin — media &amp; alt text</p>
+  <nav aria-label="Admin">
+    <a href="/admin/">Admin home</a>
+    <a href="/">Back to the site</a>
+  </nav>
+</header>
+<main id="main" class="admin">
+  <div class="pagehead" style="padding-top:6vh;">
+    <span class="k g">One source of truth</span>
+    <h1>Visuals &amp; alt-text management</h1>
+    <p class="lede">Every image on the site pulls its alt text from <code>data/media.json</code>. Edit that file to change an alt, caption or keywords — this table audits it and flags anything missing, short or non-descriptive.</p>
+  </div>
+  <p class="k g" data-media-summary style="margin:5vh 0 2vh;">Loading the register…</p>
+  <table>
+    <thead>
+      <tr><th scope="col">Image</th><th scope="col">File / page</th><th scope="col">Alt (EN)</th><th scope="col">Caption</th><th scope="col">Audit</th></tr>
+    </thead>
+    <tbody data-media-audit></tbody>
+  </table>
+</main>
+<script src="/assets/js/admin.js" defer></script>
+</body>
+</html>

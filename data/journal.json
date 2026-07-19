@@ -1,0 +1,109 @@
+{
+  "_comment": "Journal index. category: venue | production | destination | press. Venue articles cross-link the matching commission page.",
+  "articles": [
+    {
+      "slug": "castiglion-del-bosco",
+      "title": "Castiglion del Bosco: weddings at the best resort in Europe",
+      "category": "Venues & destinations",
+      "region": "Tuscany",
+      "dek": "What it is like to produce a wedding at Rosewood Castiglion del Bosco, voted best resort in Europe 2026 by Travel + Leisure readers — by a house that has produced two.",
+      "commission": "/weddings/sophie-gordon-castiglion-del-bosco/"
+    },
+    {
+      "slug": "ritz-paris",
+      "title": "The Ritz Paris: producing a wedding on Place Vendôme",
+      "category": "Venues & destinations",
+      "region": "Paris",
+      "dek": "The most storied address in Paris, and what it asks of a production house.",
+      "commission": null
+    },
+    {
+      "slug": "hotel-devreux-paris",
+      "title": "Hôtel d'Évreux: a private mansion on Place Vendôme",
+      "category": "Venues & destinations",
+      "region": "Paris",
+      "dek": "A seventeenth-century hôtel particulier, catering by Potel & Chabot, and an American bride who calls Paris home.",
+      "commission": "/weddings/landen-hotel-devreux-place-vendome/"
+    },
+    {
+      "slug": "shangri-la-paris",
+      "title": "Shangri-La Paris: a palace wedding above the Seine",
+      "category": "Venues & destinations",
+      "region": "Paris",
+      "dek": "Prince Roland Bonaparte's former residence, an Eiffel Tower view, and the evening Brides called opulent and intimate at once.",
+      "commission": "/weddings/jessica-chris-shangri-la-paris/"
+    },
+    {
+      "slug": "chateau-de-villette",
+      "title": "Château de Villette: the little Versailles, closed for one family",
+      "category": "Venues & destinations",
+      "region": "Paris",
+      "dek": "Seventeenth-century gardens by Le Nôtre's school, forty minutes from Paris — as featured in Style Me Pretty.",
+      "commission": null
+    },
+    {
+      "slug": "chateau-de-tourreau",
+      "title": "Château de Tourreau: a private estate wedding in Provence",
+      "category": "Venues & destinations",
+      "region": "Provence",
+      "dek": "An eighteenth-century château with one of the great private gardens of the Vaucluse.",
+      "commission": null
+    },
+    {
+      "slug": "chateau-martinay-provence",
+      "title": "Château Martinay: vines, stone and a Provence weekend",
+      "category": "Venues & destinations",
+      "region": "Provence",
+      "dek": "Producing a multi-day celebration among the vineyards of the Ventoux.",
+      "commission": "/weddings/chateau-martinay-provence/"
+    },
+    {
+      "slug": "borgo-stomennano",
+      "title": "Borgo Stomennano: a Chianti village given over to one wedding",
+      "category": "Venues & destinations",
+      "region": "Tuscany",
+      "dek": "Crystal chandeliers and crimson blooms in a private borgo — the weekend Style Me Pretty published in 2026.",
+      "commission": "/weddings/claire-jack-borgo-stomennano/"
+    },
+    {
+      "slug": "borgo-san-luigi",
+      "title": "Borgo San Luigi: a Tuscan borgo for a full wedding weekend",
+      "category": "Venues & destinations",
+      "region": "Tuscany",
+      "dek": "Housing every guest under one roof — the logistics that make a borgo wedding feel effortless.",
+      "commission": null
+    },
+    {
+      "slug": "orient-express-wedding",
+      "title": "A celebration aboard the Venice Simplon-Orient-Express",
+      "category": "Venues & destinations",
+      "region": "Europe",
+      "dek": "A moving venue, thirty guests, and the tightest production schedule the house has ever written.",
+      "commission": null
+    },
+    {
+      "slug": "portugal-wedding-venues",
+      "title": "Portugal: where we have produced, and where we would love to next",
+      "category": "Venues & destinations",
+      "region": "Portugal",
+      "dek": "From Marla & Alan's minimalist celebration to Sublime Comporta, Seteais and the Douro — the country on our drawing table.",
+      "commission": "/weddings/marla-alan-portugal/"
+    },
+    {
+      "slug": "greece-destinations",
+      "title": "Greece, considered: Amanzoe and the Athens Riviera",
+      "category": "Venues & destinations",
+      "region": "Greece",
+      "dek": "Where we would love to produce next — a planner's notes on Amanzoe and the Four Seasons Astir Palace.",
+      "commission": null
+    },
+    {
+      "slug": "closing-a-private-estate",
+      "title": "What it takes to close a private estate for a week",
+      "category": "Production notes",
+      "region": "Production",
+      "dek": "Exclusivity contracts, staff housing, security perimeters and the village diplomacy nobody sees.",
+      "commission": null
+    }
+  ]
+}

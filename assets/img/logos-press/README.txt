@@ -1,0 +1,1 @@
+TODO: licensed press logo SVGs (vogue.svg, martha-stewart-weddings.svg, brides.svg, style-me-pretty.svg, carats-and-cake.svg, over-the-moon.svg, wedding-sparrow.svg, the-wed.svg). Until then the logo wall renders outlet names in the display face.

@@ -1,0 +1,236 @@
+{
+  "_comment": "Single source of truth for every image on the site: file path, page(s), alt (EN), caption, keywords. All <img> alts are applied from this file at runtime (assets/js/media.js) and audited at /admin/media/. Files not yet on disk render as tasteful placeholders. TODO: replace placeholder files with Estelle's real photography.",
+  "media": [
+    {
+      "file": "assets/img/hero-poster.jpg",
+      "page": "/",
+      "alt": "Candlelit wedding dinner under the loggia of a private Tuscan estate at dusk, produced by Madame Wedding Design",
+      "caption": "The film — a commission in Tuscany",
+      "keywords": ["luxury wedding production", "private estate wedding Europe"]
+    },
+    {
+      "file": "assets/img/home/cover.jpg",
+      "page": "/",
+      "alt": "Bride and groom crossing the cypress-lined drive of Castiglion del Bosco in the Val d'Orcia, Tuscany",
+      "caption": "Castiglion del Bosco — Tuscany",
+      "keywords": ["Castiglion del Bosco wedding", "Tuscany destination wedding"]
+    },
+    {
+      "file": "assets/img/weddings/sophie-gordon/01.jpg",
+      "page": "/weddings/sophie-gordon-castiglion-del-bosco/",
+      "alt": "Long ivory-linen dinner table under Tuscan oaks at Sophie and Gordon's Castiglion del Bosco wedding",
+      "caption": "Val d'Orcia — Tuscany",
+      "keywords": ["Castiglion del Bosco wedding", "Val d'Orcia destination wedding"]
+    },
+    {
+      "file": "assets/img/weddings/sophie-gordon/02.jpg",
+      "page": "/weddings/sophie-gordon-castiglion-del-bosco/",
+      "alt": "Sophie and Gordon's first dance in the borgo courtyard of Rosewood Castiglion del Bosco, lit by candles",
+      "caption": "The borgo courtyard, evening",
+      "keywords": ["Tuscany wedding for American couples"]
+    },
+    {
+      "file": "assets/img/weddings/vintage-chanel-bride/01.jpg",
+      "page": "/weddings/vintage-chanel-bride-paris/",
+      "alt": "Paris bride in a pink vintage Chanel gown once worn by Claudia Schiffer on the runway, photographed for Vogue",
+      "caption": "The vintage Chanel gown — Paris",
+      "keywords": ["vintage Chanel wedding dress", "Vogue featured Paris wedding"]
+    },
+    {
+      "file": "assets/img/weddings/vintage-chanel-bride/02.jpg",
+      "page": "/weddings/vintage-chanel-bride-paris/",
+      "alt": "Bride crossing a Paris courtyard in vintage Chanel, evening light on Haussmann stone",
+      "caption": "Paris, before the evening",
+      "keywords": ["Paris wedding planner Vogue"]
+    },
+    {
+      "file": "assets/img/weddings/jessica-chris/01.jpg",
+      "page": "/weddings/jessica-chris-shangri-la-paris/",
+      "alt": "Jessica and Chris's candlelit wedding dinner at Shangri-La Paris with the Eiffel Tower beyond the windows",
+      "caption": "Shangri-La Paris — the dinner",
+      "keywords": ["Shangri-La Paris wedding", "Paris palace wedding"]
+    },
+    {
+      "file": "assets/img/weddings/jessica-chris/02.jpg",
+      "page": "/weddings/jessica-chris-shangri-la-paris/",
+      "alt": "White floral installation over the historic salon at Jessica and Chris's Shangri-La Paris wedding, featured in Brides",
+      "caption": "The salon, dressed",
+      "keywords": ["luxury wedding Paris", "Brides featured wedding"]
+    },
+    {
+      "file": "assets/img/weddings/claire-jack/01.jpg",
+      "page": "/weddings/claire-jack-borgo-stomennano/",
+      "alt": "Crystal chandeliers and crimson blooms over the dinner table at Claire and Jack's Borgo Stomennano wedding in Chianti",
+      "caption": "Borgo Stomennano — Chianti",
+      "keywords": ["Borgo Stomennano wedding", "Chianti wedding weekend"]
+    },
+    {
+      "file": "assets/img/weddings/claire-jack/02.jpg",
+      "page": "/weddings/claire-jack-borgo-stomennano/",
+      "alt": "Guests at long tables in the borgo courtyard at dusk, Chianti hills behind",
+      "caption": "The courtyard at dusk",
+      "keywords": ["Italian borgo wedding", "multi-day wedding Tuscany"]
+    },
+    {
+      "file": "assets/img/weddings/landen/01.jpg",
+      "page": "/weddings/landen-hotel-devreux-place-vendome/",
+      "alt": "Wedding dinner by Potel & Chabot in the gilded grand salon of Hôtel d'Évreux on Place Vendôme, Paris",
+      "caption": "Hôtel d'Évreux — Place Vendôme",
+      "keywords": ["Hôtel d'Évreux wedding", "Place Vendôme wedding"]
+    },
+    {
+      "file": "assets/img/weddings/landen/02.jpg",
+      "page": "/weddings/landen-hotel-devreux-place-vendome/",
+      "alt": "Bride on the balcony of Hôtel d'Évreux overlooking Place Vendôme at blue hour",
+      "caption": "Place Vendôme, blue hour",
+      "keywords": ["American in Paris wedding"]
+    },
+    {
+      "file": "assets/img/weddings/aimee-john/01.jpg",
+      "page": "/weddings/aimee-connolly-john-greene-chateau-burgundy/",
+      "alt": "Aimee Connolly and John Greene's château wedding in Burgundy, long tables in the orangery",
+      "caption": "Burgundy — the orangery",
+      "keywords": ["Aimee Connolly wedding", "château wedding Burgundy France"]
+    },
+    {
+      "file": "assets/img/weddings/aimee-john/02.jpg",
+      "page": "/weddings/aimee-connolly-john-greene-chateau-burgundy/",
+      "alt": "Ceremony in the château park under plane trees, Burgundy, France",
+      "caption": "The park, before the ceremony",
+      "keywords": ["Irish couple destination wedding France"]
+    },
+    {
+      "file": "assets/img/weddings/marla-alan/01.jpg",
+      "page": "/weddings/marla-alan-portugal/",
+      "alt": "Minimalist white wedding tablescape against the Atlantic light at Marla and Alan's Portugal wedding",
+      "caption": "Portugal — the Atlantic table",
+      "keywords": ["minimalist luxury wedding Portugal"]
+    },
+    {
+      "file": "assets/img/weddings/marla-alan/02.jpg",
+      "page": "/weddings/marla-alan-portugal/",
+      "alt": "Couple walking a windswept dune path after their editorial-modern Portugal wedding",
+      "caption": "After the ceremony",
+      "keywords": ["destination wedding planner Portugal", "modern editorial wedding Europe"]
+    },
+    {
+      "file": "assets/img/weddings/agatha/01.jpg",
+      "page": "/weddings/agatha-castiglion-del-bosco-private-villa/",
+      "alt": "Intimate thirteen-guest wedding dinner in a private villa at Castiglion del Bosco, Tuscany",
+      "caption": "A private villa — thirteen guests",
+      "keywords": ["intimate luxury wedding Tuscany", "private estate wedding Italy"]
+    },
+    {
+      "file": "assets/img/weddings/cindy-franklyn/01.jpg",
+      "page": "/weddings/cindy-franklyn-chateau-burgundy/",
+      "alt": "Cindy and Franklyn's château reception in Burgundy, tropical arrangements in a stone hall, featured by Martha Stewart Weddings",
+      "caption": "Burgundy — the stone hall",
+      "keywords": ["château wedding Burgundy", "Martha Stewart featured wedding France"]
+    },
+    {
+      "file": "assets/img/weddings/chateau-martinay/01.jpg",
+      "page": "/weddings/chateau-martinay-provence/",
+      "alt": "Château Martinay wedding dinner among Provence vineyards at golden hour",
+      "caption": "Château Martinay — Provence",
+      "keywords": ["Provence château wedding", "luxury wedding planner Provence"]
+    },
+    {
+      "file": "assets/img/journal/castiglion-del-bosco.jpg",
+      "page": "/journal/castiglion-del-bosco/",
+      "alt": "The thousand-year borgo of Rosewood Castiglion del Bosco above the Val d'Orcia, best resort in Europe 2026",
+      "caption": "Castiglion del Bosco — Val d'Orcia",
+      "keywords": ["Castiglion del Bosco wedding", "best resort in Europe"]
+    },
+    {
+      "file": "assets/img/journal/ritz-paris.jpg",
+      "page": "/journal/ritz-paris/",
+      "alt": "Façade of the Ritz Paris on Place Vendôme at dusk",
+      "caption": "The Ritz Paris — Place Vendôme",
+      "keywords": ["Ritz Paris wedding"]
+    },
+    {
+      "file": "assets/img/journal/hotel-devreux.jpg",
+      "page": "/journal/hotel-devreux-paris/",
+      "alt": "Grand salon of Hôtel d'Évreux dressed for a wedding dinner, Place Vendôme, Paris",
+      "caption": "Hôtel d'Évreux — the grand salon",
+      "keywords": ["Hôtel d'Évreux wedding", "Potel & Chabot wedding"]
+    },
+    {
+      "file": "assets/img/journal/shangri-la-paris.jpg",
+      "page": "/journal/shangri-la-paris/",
+      "alt": "Shangri-La Paris terrace with a direct view of the Eiffel Tower, set for a wedding ceremony",
+      "caption": "Shangri-La Paris — the terrace",
+      "keywords": ["Shangri-La Paris wedding"]
+    },
+    {
+      "file": "assets/img/journal/chateau-de-villette.jpg",
+      "page": "/journal/chateau-de-villette/",
+      "alt": "Château de Villette and its formal gardens reflected in the water parterre, near Paris",
+      "caption": "Château de Villette — the water parterre",
+      "keywords": ["Château de Villette wedding"]
+    },
+    {
+      "file": "assets/img/journal/chateau-de-tourreau.jpg",
+      "page": "/journal/chateau-de-tourreau/",
+      "alt": "Château de Tourreau's eighteenth-century façade and private gardens in Provence",
+      "caption": "Château de Tourreau — Provence",
+      "keywords": ["Château de Tourreau wedding"]
+    },
+    {
+      "file": "assets/img/journal/chateau-martinay.jpg",
+      "page": "/journal/chateau-martinay-provence/",
+      "alt": "Vineyard rows leading to Château Martinay under Mont Ventoux, Provence",
+      "caption": "Château Martinay — the vines",
+      "keywords": ["Château Martinay wedding Provence"]
+    },
+    {
+      "file": "assets/img/journal/borgo-stomennano.jpg",
+      "page": "/journal/borgo-stomennano/",
+      "alt": "Borgo Stomennano's private village square in Chianti dressed with crystal chandeliers for a wedding weekend",
+      "caption": "Borgo Stomennano — Chianti",
+      "keywords": ["Borgo Stomennano wedding"]
+    },
+    {
+      "file": "assets/img/journal/borgo-san-luigi.jpg",
+      "page": "/journal/borgo-san-luigi/",
+      "alt": "Cypress avenue and stone farmhouses of Borgo San Luigi in the Tuscan hills",
+      "caption": "Borgo San Luigi — Tuscany",
+      "keywords": ["Borgo San Luigi wedding"]
+    },
+    {
+      "file": "assets/img/journal/orient-express.jpg",
+      "page": "/journal/orient-express-wedding/",
+      "alt": "Restored 1920s dining car of the Venice Simplon-Orient-Express set for a private celebration",
+      "caption": "Venice Simplon-Orient-Express",
+      "keywords": ["Orient Express wedding", "celebration aboard the Venice Simplon-Orient-Express"]
+    },
+    {
+      "file": "assets/img/journal/portugal.jpg",
+      "page": "/journal/portugal-wedding-venues/",
+      "alt": "Umbrella pines and dunes of the Comporta coast, Portugal, in soft Atlantic light",
+      "caption": "Comporta — Portugal (country imagery, TODO: Estelle's photos)",
+      "keywords": ["Portugal wedding venues", "Comporta wedding"]
+    },
+    {
+      "file": "assets/img/journal/greece.jpg",
+      "page": "/journal/greece-destinations/",
+      "alt": "Aegean coastline near Porto Heli at dusk, olive terraces meeting the sea",
+      "caption": "The Peloponnese coast — Greece (country imagery, TODO: Estelle's photos)",
+      "keywords": ["Greece destination wedding", "Amanzoe wedding"]
+    },
+    {
+      "file": "assets/img/journal/closing-a-private-estate.jpg",
+      "page": "/journal/closing-a-private-estate/",
+      "alt": "Production crew raising a sailcloth tent at dawn on the lawn of a closed private estate",
+      "caption": "Dawn, day minus three",
+      "keywords": ["private estate wedding production"]
+    },
+    {
+      "file": "assets/img/the-house/estelle-bogaert.jpg",
+      "page": "/the-house/",
+      "alt": "Estelle Bogaert, Founder and Creative Director of Madame Wedding Design, in the atelier",
+      "caption": "Estelle Bogaert, Founder & Creative Director",
+      "keywords": ["Estelle Bogaert", "Madame Wedding Design founder"]
+    }
+  ]
+}

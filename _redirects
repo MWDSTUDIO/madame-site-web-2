@@ -1,0 +1,16 @@
+# Netlify redirects — trailing-slash consistency and legacy .html cleanup.
+# Netlify serves folder/index.html at /folder/ natively ("Pretty URLs").
+
+# Never serve raw index.html paths
+/index.html            /                 301!
+/:page/index.html      /:page/           301!
+
+# Legacy flat .html requests (defensive: nothing links to these)
+/the-house.html        /the-house/       301!
+/services.html         /services/        301!
+/weddings.html         /weddings/        301!
+/journal.html          /journal/         301!
+/press.html            /press/           301!
+/faq.html              /faq/             301!
+/privacy.html          /privacy/         301!
+/inquire.html          /inquire/         301!
