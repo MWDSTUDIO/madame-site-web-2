@@ -36,7 +36,6 @@
       var img = document.createElement("img");
       img.className = "thumb";
       img.alt = m.alt || "";
-      img.loading = "lazy";
       img.onerror = function () {
         var d = document.createElement("div");
         d.className = "thumb ph";
