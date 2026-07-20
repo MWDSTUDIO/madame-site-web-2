@@ -39,21 +39,29 @@
       if (videoSrc && !reduced) {
         var v = document.createElement("video");
         v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
-        v.setAttribute("playsinline", ""); v.preload = "auto";
+        /* Safari needs the attributes, not just the properties, for silent autoplay */
+        v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.setAttribute("autoplay", "");
+        v.preload = "auto";
         v.setAttribute("aria-label", alt);
         v.addEventListener("canplay", function () {
           if (!v.parentNode) fig.insertBefore(v, fig.firstChild);
           var p = v.play(); if (p && p.catch) p.catch(function () {});
         }, { once: true });
-        v.addEventListener("error", function () { v.remove(); }, true);
-        /* webm first (open codec), mp4 fallback — the photo below covers the rest */
-        var webm = document.createElement("source");
-        webm.src = ROOT + "/" + videoSrc.replace(/\.mp4$/, ".webm");
-        webm.type = "video/webm";
+        /* Element-level failure only (network/decode of the chosen source).
+           NOT capture:true — a capture listener also caught the <source>
+           fallback chain and killed the video on browsers without WebM. */
+        v.addEventListener("error", function () { v.remove(); });
+        /* mp4 first (universal: Safari/Chrome/Edge/mobile), webm as open-codec
+           fallback — the photo underneath covers browsers that play neither. */
         var mp4 = document.createElement("source");
         mp4.src = ROOT + "/" + videoSrc;
         mp4.type = "video/mp4";
-        v.appendChild(webm); v.appendChild(mp4);
+        var webm = document.createElement("source");
+        webm.src = ROOT + "/" + videoSrc.replace(/\.mp4$/, ".webm");
+        webm.type = "video/webm";
+        /* If the LAST source errors, no format worked: remove, the photo stays. */
+        webm.addEventListener("error", function () { v.remove(); });
+        v.appendChild(mp4); v.appendChild(webm);
         v.load();
       }
 
