@@ -44,13 +44,13 @@ body.letter{background:var(--threshold);overflow:hidden;}
 
 /* The cachet: the hunter logo settles onto the closed curtain */
 .cachet{position:fixed;inset:0;z-index:calc(var(--z-overlay) + 2);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:52px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;
   opacity:0;transform:scale(1.05);animation:settle 1.8s ease 9.6s forwards;pointer-events:none;}
-.cachet .mark{position:relative;display:flex;align-items:center;justify-content:center;}
-.cachet .mark::before{content:"";position:absolute;inset:-58% -34%;
-  background:url("/assets/brand/cipher-hunter.png") center/contain no-repeat;opacity:.09;}
-.cachet .mark img{position:relative;width:min(340px,66vw);height:auto;}
-.cachet .back{pointer-events:auto;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;
+.cachet .mark{display:flex;align-items:center;justify-content:center;}
+/* Estelle's original board: same sand as the curtains, so it melts into them
+   and carries the true embossed cipher. */
+.cachet .mark img{width:min(760px,92vw);height:auto;}
+.cachet .back{pointer-events:auto;margin-top:-4vh;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;
   color:var(--ink);border-bottom:1px solid var(--ink-15);padding:10px 2px 6px;transition:border-color .5s;}
 .cachet .back:hover{border-color:var(--ink);}
 @keyframes appear{to{opacity:1;}}
@@ -82,7 +82,7 @@ body.letter{background:var(--threshold);overflow:hidden;}
 <div class="curtain right" aria-hidden="true"></div>
 
 <div class="cachet">
-  <span class="mark"><img src="/assets/brand/logo-hunter.png" alt="" aria-hidden="true" width="817" height="363"></span>
+  <span class="mark"><img src="/assets/brand/logo-principal-hunter.png" alt="" aria-hidden="true" width="1374" height="1026"></span>
   <img class="rm" src="/assets/brand/logo-ivory.png" alt="" aria-hidden="true" width="817" height="363">
   <a class="back" href="/">Return to the house</a>
 </div>
