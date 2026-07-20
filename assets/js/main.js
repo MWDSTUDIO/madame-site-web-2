@@ -43,6 +43,9 @@
   document.getElementById("enterbtn").addEventListener("click", function () {
     document.body.classList.add("entered");
     intro.setAttribute("aria-hidden", "true");
+    /* The masthead sits above the film; entering lands the visitor on the film
+       full-viewport (the ritual), with the masthead one scroll above. */
+    if (hero) hero.scrollIntoView({ behavior: "auto", block: "start" });
     if (film && !reduced) {
       /* The click is the browser gesture: the film may now play with sound. */
       film.muted = false;

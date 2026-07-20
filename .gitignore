@@ -25,3 +25,6 @@ assets/audio/*.mp3
 
 # Impeccable live-mode scratch
 .impeccable/live/
+
+# Committed exception: the enquiry-form reel (compressed to web weight)
+!assets/video/enquiries.mp4

@@ -39,14 +39,22 @@
       if (videoSrc && !reduced) {
         var v = document.createElement("video");
         v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
-        v.setAttribute("playsinline", ""); v.preload = "metadata";
+        v.setAttribute("playsinline", ""); v.preload = "auto";
         v.setAttribute("aria-label", alt);
-        v.addEventListener("loadeddata", function () {
-          fig.insertBefore(v, fig.firstChild);
+        v.addEventListener("canplay", function () {
+          if (!v.parentNode) fig.insertBefore(v, fig.firstChild);
           var p = v.play(); if (p && p.catch) p.catch(function () {});
         }, { once: true });
         v.addEventListener("error", function () { v.remove(); }, true);
-        v.src = ROOT + "/" + videoSrc;
+        /* webm first (open codec), mp4 fallback — the photo below covers the rest */
+        var webm = document.createElement("source");
+        webm.src = ROOT + "/" + videoSrc.replace(/\.mp4$/, ".webm");
+        webm.type = "video/webm";
+        var mp4 = document.createElement("source");
+        mp4.src = ROOT + "/" + videoSrc;
+        mp4.type = "video/mp4";
+        v.appendChild(webm); v.appendChild(mp4);
+        v.load();
       }
 
       var img = new Image();
