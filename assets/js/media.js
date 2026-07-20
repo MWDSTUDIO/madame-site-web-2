@@ -40,12 +40,26 @@
         var v = document.createElement("video");
         v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
         /* Safari needs the attributes, not just the properties, for silent autoplay */
-        v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.setAttribute("autoplay", "");
+        v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.setAttribute("autoplay", ""); v.setAttribute("loop", "");
         v.preload = "auto";
         v.setAttribute("aria-label", alt);
+        /* Some desktop configurations (Safari "Never Auto-Play", low-power modes)
+           refuse even muted autoplay: retry at the visitor's first gesture. */
+        var tryPlay = function () {
+          v.muted = true;
+          var p = v.play();
+          if (p && p.catch) p.catch(function () {
+            ["click", "touchstart", "scroll", "keydown"].forEach(function (evt) {
+              window.addEventListener(evt, function retry() {
+                window.removeEventListener(evt, retry);
+                if (v.paused) { var q = v.play(); if (q && q.catch) q.catch(function () {}); }
+              }, { once: true, passive: true });
+            });
+          });
+        };
         v.addEventListener("canplay", function () {
           if (!v.parentNode) fig.insertBefore(v, fig.firstChild);
-          var p = v.play(); if (p && p.catch) p.catch(function () {});
+          tryPlay();
         }, { once: true });
         /* Element-level failure only (network/decode of the chosen source).
            NOT capture:true — a capture listener also caught the <source>
