@@ -17,8 +17,8 @@
 ## 2. La carte page par page
 
 ### ACCUEIL — /
-- **Title** : `Luxury Wedding Planner & Production House | Madame Wedding Design`
-- **Meta** : `Madame Wedding Design plans, designs and produces a limited number of private weddings each year, worldwide — full wedding planning service & production for celebrations of consequence.`
+- **Title** : `Destination Wedding Planner & Production House | Madame Wedding Design` *(validé par Estelle, 20/07/2026 — angle « destination », à la Easton)*
+- **Meta** : `Madame Wedding Design curates and produces destination weddings in a quiet-luxury spirit — a limited number of private celebrations each year, worldwide.` *(validé par Estelle, 20/07/2026)*
 - **H1** : `Weddings of consequence, produced without compromise.`
 - **H2** : `A letter from the house` · `Recent commissions` · `Capabilities` · `In the press` · `Notes on the art of hosting` · `Tell us about your celebration`
 
