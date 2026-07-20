@@ -16,8 +16,10 @@
 - Three services only: Full Wedding Planning & Production / Creative Direction /
   Destination & Logistics. NEVER "partial planning" or "month-of".
 - Budgets: nothing under $100,000; threshold stated only in FAQ + Investment step.
-- Version C voice: concrete, editorial, Easton/Marcy Blum register; weddings are
-  "commissions"; banned vocabulary: dream wedding, magical, fairy tale.
+- Version C voice: concrete, editorial, Easton/Marcy Blum register; banned
+  vocabulary: dream wedding, magical, fairy tale. Portfolio sections use wedding
+  language ("Our latest weddings", "Wedding highlights" — Estelle, 20/07/2026);
+  "commission" may season prose sparingly, never section titles.
 - Entry threshold: hunter green + ivory ONLY — no gold, champagne, or metallics.
 - Clean URLs, no .html; lowercase-hyphen keyword-rich slugs.
 - Never overwrite corrections already made manually by Estelle.

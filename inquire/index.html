@@ -84,6 +84,27 @@
   <p class="lede">We accept a limited number of weddings each year, by enquiry and referral. We reply, personally, within 48 hours.</p>
 </div>
 
+<!-- Netlify Forms registration: parsed at deploy time so submissions appear
+     in the Netlify dashboard (Forms -> enquiry). The couture multi-step form
+     posts to it via AJAX (assets/js/enquiry-form.js). Keep field names in sync. -->
+<form name="enquiry" data-netlify="true" netlify-honeypot="bot-field" hidden aria-hidden="true">
+  <input type="text" name="bot-field">
+  <input type="text" name="name">
+  <input type="email" name="email">
+  <input type="tel" name="phone">
+  <input type="text" name="found">
+  <input type="text" name="date">
+  <input type="text" name="destination">
+  <input type="text" name="guests">
+  <input type="text" name="type">
+  <textarea name="vision"></textarea>
+  <input type="text" name="services">
+  <input type="text" name="investment">
+  <textarea name="lastword"></textarea>
+  <input type="text" name="consent">
+  <input type="text" name="journal">
+</form>
+
 <section class="pad-sec-s" aria-label="Enquiry form">
   <div class="enq-grid rv">
     <!-- Editorial visual beside the form. Add assets/video/enquiries.mp4 to play a muted film loop;

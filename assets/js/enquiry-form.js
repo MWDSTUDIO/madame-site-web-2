@@ -166,6 +166,8 @@
 
     function payload() {
       return {
+        "form-name": CONFIG.FORM_NAME || "enquiry",
+        "bot-field": "",
         name: form.name.value.trim(),
         email: form.email.value.trim(),
         phone: form.phone.value.trim(),
@@ -179,8 +181,7 @@
         investment: groupValues("investment").join(", "),
         lastword: form.lastword.value.trim(),
         consent: form.consent.checked ? "yes" : "no",
-        journal: form.journal.checked ? "yes" : "no",
-        _subject: "Enquiry — Madame Wedding Design"
+        journal: form.journal.checked ? "yes" : "no"
       };
     }
 
@@ -188,15 +189,19 @@
       next.disabled = true;
       next.textContent = "Sending…";
       submitErr.classList.remove("show");
-      fetch(CONFIG.FORMSPREE_ENDPOINT, {
+      /* Netlify Forms: urlencoded POST to any path on the site; the submission
+         appears in the dashboard table. Success leads to the closing of the
+         circle — /inquire/thank-you/. */
+      var body = Object.entries(payload()).map(function (kv) {
+        return encodeURIComponent(kv[0]) + "=" + encodeURIComponent(kv[1]);
+      }).join("&");
+      fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify(payload())
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body
       }).then(function (r) {
         if (!r.ok) throw new Error("send failed");
-        form.style.display = "none";
-        root.querySelector(".progress").style.display = "none";
-        root.querySelector(".confirm").classList.add("show");
+        window.location.href = CONFIG.THANK_YOU_URL || "/inquire/thank-you/";
       }).catch(function () {
         next.disabled = false;
         next.textContent = "Send enquiry";

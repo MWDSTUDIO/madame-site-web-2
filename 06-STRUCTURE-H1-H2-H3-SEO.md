@@ -20,7 +20,7 @@
 - **Title** : `Destination Wedding Planner & Production House | Madame Wedding Design` *(validé par Estelle, 20/07/2026 — angle « destination », à la Easton)*
 - **Meta** : `Madame Wedding Design curates and produces destination weddings in a quiet-luxury spirit — a limited number of private celebrations each year, worldwide.` *(validé par Estelle, 20/07/2026)*
 - **H1** : `Weddings of consequence, produced without compromise.`
-- **H2** : `A letter from the house` · `Recent commissions` · `Capabilities` · `In the press` · `Notes on the art of hosting` · `Tell us about your celebration`
+- **H2** : `A letter from the house` · `Our latest weddings` *(renommé par Estelle, 20/07/2026 — ex « Recent commissions »)* · `Capabilities` · `In the press` · `Notes on the art of hosting` · `Tell us about your celebration`
 
 ### THE HOUSE — /the-house/
 - **Title** : `The House — Full Wedding Planning & Production, Worldwide | Madame Wedding Design`
@@ -37,7 +37,7 @@
 ### WEDDINGS (index) — /weddings/
 - **Title** : `Luxury Destination Weddings in Italy, France & Europe | Madame Wedding Design`
 - **Meta** : `A quiet portfolio of private weddings produced across Tuscany, Provence, Paris, Burgundy and Portugal — for couples from New York to Dublin.`
-- **H1** : `Recent commissions`
+- **H1** : `Our latest weddings` *(renommé par Estelle, 20/07/2026)*
 - **H2** : un par destination : `Tuscany` · `Provence` · `Paris` · `Burgundy` · `Portugal`
 
 ### PAGE MARIAGE (gabarit) — ex. /weddings/sophie-gordon-castiglion-del-bosco/

@@ -74,10 +74,18 @@ images in `data/media.json`, add to `sitemap.xml`.
 - Real photography for every file registered in `data/media.json` (missing
   files render as tasteful neutral placeholders until then).
 - `assets/brand/seal.svg` / `logo.svg` — engraved masters (placeholders in place).
-- The Formspree form id in `assets/js/config.js` (`FORMSPREE_ENDPOINT`) —
-  target hello@madamewedding.design.
 - Licensed display/body typefaces (Canela / Austin / Chronicle) to replace
   Cormorant Garamond / EB Garamond.
+
+## The enquiry form (Netlify Forms)
+
+Submissions land in the Netlify dashboard — **Forms → enquiry** — as a table
+(CSV export available), ready to manage replies with Claude. One-time setup in
+Netlify: **Project configuration → Forms → Enable form detection**, then add an
+email notification to hello@madamewedding.design (Forms → Form notifications).
+The hidden registration form lives in `/inquire/index.html`; the couture
+multi-step component posts to it via AJAX and lands on `/inquire/thank-you/` —
+the closing of the hunter sas. Keep field names in sync in both places.
 
 ## Deploy (Netlify)
 

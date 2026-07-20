@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You — Your Enquiry Is With the House | Madame Wedding Design</title>
+<meta name="description" content="Your celebration has our full attention. Madame Wedding Design replies to every enquiry, personally, within 48 hours.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://madamewedding.design/inquire/thank-you/">
+<link rel="icon" href="/assets/brand/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon/favicon-16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/brand/favicon/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/favicon/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+/* The circle closes: the ivory page is enclosed by the hunter sas, then the
+   monogram surfaces — the mirror of the entry threshold. Reduced motion gets
+   the finished scene instantly. */
+body.sas-close{background:var(--ivory);overflow:hidden;}
+.sas{position:fixed;inset:0;z-index:var(--z-overlay);background:var(--threshold);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  color:var(--ivory);padding:24px;
+  clip-path:circle(0% at 50% 50%);animation:sasclose 2s cubic-bezier(.22,1,.36,1) .35s forwards;}
+@keyframes sasclose{to{clip-path:circle(120% at 50% 50%);}}
+.sas .cipher{width:min(150px,36vw);opacity:0;transform:scale(1.08);
+  animation:surface 1.4s ease 1.6s forwards;}
+.sas .line{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(30px,4.6vw,48px);
+  line-height:1.2;text-wrap:balance;margin:30px 0 14px;opacity:0;animation:surface 1.3s ease 2.1s forwards;}
+.sas p.msg{max-width:44ch;font-size:17.5px;line-height:1.8;color:rgba(247,244,238,.82);
+  opacity:0;animation:surface 1.3s ease 2.5s forwards;}
+.sas .back{margin-top:48px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;
+  border:1px solid rgba(247,244,238,.45);padding:15px 40px;color:var(--ivory);
+  transition:background .6s,color .6s;opacity:0;animation:surface 1.3s ease 2.9s forwards;}
+.sas .back:hover{background:var(--ivory);color:var(--threshold);}
+@keyframes surface{to{opacity:1;transform:none;}}
+@media(prefers-reduced-motion:reduce){
+  .sas{clip-path:none;animation:none;}
+  .sas .cipher,.sas .line,.sas p.msg,.sas .back{opacity:1;transform:none;animation:none;}
+}
+</style>
+</head>
+<body class="sas-close">
+
+<main class="sas" id="main">
+  <img class="cipher" src="/assets/brand/cipher-ivory.png" alt="" aria-hidden="true" width="198" height="123">
+  <h1 class="line">Thank you.</h1>
+  <p class="msg">Your celebration has our full attention. The house replies to every enquiry &mdash; personally, within 48 hours.</p>
+  <a class="back" href="/">Return to the house</a>
+</main>
+
+</body>
+</html>
