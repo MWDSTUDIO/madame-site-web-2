@@ -191,8 +191,9 @@
       submitErr.classList.remove("show");
       var data = payload();
 
-      /* Parallel lane — Netlify Forms: silent until detection is enabled in
-         the Netlify UI, then the dashboard table fills up too. Fire and forget. */
+      /* Netlify Forms: urlencoded POST to the page carrying the registered
+         form; the submission lands in the dashboard and triggers the email
+         notification configured there. */
       var urlencoded = Object.entries(data).map(function (kv) {
         return encodeURIComponent(kv[0]) + "=" + encodeURIComponent(kv[1]);
       }).join("&");
@@ -200,18 +201,6 @@
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: urlencoded
-      }).catch(function () {});
-
-      /* Primary lane — FormSubmit: the table email straight to the inbox. */
-      var fs = Object.assign({}, data, {
-        _subject: "New enquiry — " + (data.name || "unnamed") + (data.destination ? " · " + data.destination : "") + " | Madame Wedding Design",
-        _template: "table"
-      });
-      delete fs["form-name"]; delete fs["bot-field"];
-      fetch(CONFIG.FORMSUBMIT_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify(fs)
       }).then(function (r) {
         if (!r.ok) throw new Error("send failed");
         /* Leave the name for the thank-you letter ("Dear …"). */
