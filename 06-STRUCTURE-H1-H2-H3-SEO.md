@@ -74,7 +74,7 @@
 ### ENQUIRIES — /inquire/
 *(Correction de l'erreur Easton : UN seul H1, hiérarchie propre.)*
 - **Title** : `Enquiries — Begin a Conversation | Madame Wedding Design`
-- **Meta** : `We accept a limited number of weddings each year, by enquiry and referral. Tell us about your celebration — we reply personally within 48 hours.`
+- **Meta** : `We accept a limited number of weddings each year, by enquiry and referral. Tell us about your celebration — every enquiry receives a personal reply.`
 - **H1** : `Tell us about your celebration`
 - **H2** : aucun (le formulaire suit) ; l'écran de confirmation utilise un H2 : `Thank you.`
 

@@ -58,7 +58,7 @@
     '<button type="button" class="btn" data-next>Continue</button></div>' +
     '<p class="err" data-submit-err aria-live="polite" style="text-align:center;margin-top:26px;"></p>' +
     "</form>" +
-    '<div class="confirm" role="status"><p class="h">Thank you.</p><p>Your celebration has our full attention. We reply to every enquiry within 48 hours.</p></div>' +
+    '<div class="confirm" role="status"><p class="h">Thank you.</p><p>Your celebration has our full attention. Estelle will write to you, personally.</p></div>' +
     "</div>";
 
   function chips(labels) {
