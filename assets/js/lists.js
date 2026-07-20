@@ -12,39 +12,45 @@
     return e;
   }
   function esc(s) { return String(s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+  function noTodo(s) { return s && !/TODO/i.test(s) ? s : null; }
 
-  /* --- Commissions index, grouped by destination (/weddings/) --- */
+  /* --- Commissions index, grouped by destination (/weddings/) ---
+     The page ships with this list statically baked (crawlable); when the JSON
+     changes, this re-render keeps the page current without editing HTML. */
   var wIndex = document.querySelector("[data-weddings-index]");
   if (wIndex) {
     fetch("/data/weddings.json").then(function (r) { return r.json(); }).then(function (data) {
+      wIndex.textContent = "";
       (data.hubs || []).forEach(function (hub) {
         var items = (data.commissions || []).filter(function (c) { return c.hub === hub.slug; });
         if (!items.length) return;
-        var group = el("div", "jgroup rv");
+        var group = el("div", "jgroup");
         var h = el("h2", null, esc(hub.name));
         group.appendChild(h);
         items.forEach(function (c) {
           var a = el("a", "jrow");
           a.href = "/weddings/" + c.slug + "/";
-          a.appendChild(el("span", "t", esc(c.title) + " <em>&mdash; " + esc(c.couple) + "</em>"));
-          a.appendChild(el("span", "m", esc(c.origin && c.origin.label ? "From " + c.origin.label.replace(/\s*\(TODO[^)]*\)/i, "") : c.region)));
+          var couple = noTodo(c.couple);
+          a.appendChild(el("span", "t", esc(c.title) + (couple ? " <em>&mdash; " + esc(couple) + "</em>" : "")));
+          var origin = c.origin && noTodo((c.origin.label || "").replace(/\s*\(TODO[^)]*\)/i, ""));
+          a.appendChild(el("span", "m", origin ? "From " + esc(origin) : esc(hub.name)));
           group.appendChild(a);
         });
         var hubLink = el("a", "jrow");
         hubLink.href = "/weddings/" + hub.slug + "/";
         hubLink.appendChild(el("span", "t", "<em>All weddings in " + esc(hub.name) + " &rarr;</em>"));
+        hubLink.appendChild(el("span", "m", "The hub"));
         group.appendChild(hubLink);
         wIndex.appendChild(group);
       });
-      if (window.MWD && window.MWD.reveal) window.MWD.reveal(wIndex);
-      wIndex.querySelectorAll(".rv").forEach(function (n) { n.classList.add("in"); });
-    });
+    }).catch(function () { /* static content already in place */ });
   }
 
-  /* --- Journal index, grouped by category (/journal/) --- */
+  /* --- Journal index, grouped by category (/journal/) — same pattern --- */
   var jIndex = document.querySelector("[data-journal-index]");
   if (jIndex) {
     fetch("/data/journal.json").then(function (r) { return r.json(); }).then(function (data) {
+      jIndex.textContent = "";
       var cats = [];
       (data.articles || []).forEach(function (a) { if (cats.indexOf(a.category) < 0) cats.push(a.category); });
       cats.forEach(function (cat) {
@@ -59,7 +65,7 @@
         });
         jIndex.appendChild(group);
       });
-    });
+    }).catch(function () { /* static content already in place */ });
   }
 
   /* --- "More weddings in {region}" cross-links on commission pages --- */

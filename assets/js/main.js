@@ -1,6 +1,9 @@
 /* main.js — dignified motion, the private-circle threshold, and the film's sound. */
 (function () {
   "use strict";
+  /* Progressive enhancement flag: reveals and the collapsed mobile menu only
+     apply when JS runs — crawlers and no-JS visitors get everything visible. */
+  document.documentElement.classList.add("js");
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* --- Soft reveals (respecting prefers-reduced-motion) --- */
@@ -15,13 +18,44 @@
     document.querySelectorAll(".rv").forEach(function (el) { el.classList.add("in"); });
   }
 
-  /* --- Current page in the masthead nav --- */
+  /* --- Current page in the main nav --- */
   var path = location.pathname.replace(/index\.html$/, "");
-  document.querySelectorAll(".masthead nav a").forEach(function (a) {
+  document.querySelectorAll(".mainnav .nav-links a").forEach(function (a) {
     var href = a.getAttribute("href");
     if (href !== "/" && path.indexOf(href) === 0) a.setAttribute("aria-current", "page");
     else if (href === "/" && path === "/") a.setAttribute("aria-current", "page");
   });
+
+  /* --- Sticky nav: the cipher appears once the masthead scrolls away --- */
+  var mainnav = document.querySelector(".mainnav");
+  var masthead = document.querySelector(".masthead");
+  if (mainnav && masthead && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      mainnav.classList.toggle("stuck", !entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(masthead);
+  }
+
+  /* --- Mobile menu: links stay in the DOM; the button only folds them --- */
+  var navToggle = mainnav && mainnav.querySelector(".nav-toggle");
+  if (navToggle) {
+    var closeMenu = function () {
+      mainnav.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    };
+    navToggle.addEventListener("click", function () {
+      var open = mainnav.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", String(open));
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && mainnav.classList.contains("open")) { closeMenu(); navToggle.focus(); }
+    });
+    document.addEventListener("click", function (e) {
+      if (mainnav.classList.contains("open") && !mainnav.contains(e.target)) closeMenu();
+    });
+    mainnav.querySelectorAll(".nav-links a").forEach(function (a) {
+      a.addEventListener("click", closeMenu);
+    });
+  }
 
   /* --- The threshold (home only) --- */
   var intro = document.getElementById("intro");

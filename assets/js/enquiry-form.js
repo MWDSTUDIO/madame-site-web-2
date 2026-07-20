@@ -12,13 +12,13 @@
 
   var TEMPLATE =
     '<div class="form">' +
-    '<div class="progress" aria-hidden="true"><div class="bar" style="width:20%"></div></div>' +
+    '<div class="progress" aria-hidden="true"><div class="bar"></div></div>' +
     '<form novalidate>' +
 
     '<fieldset class="step active" data-step="1"><legend class="sk">I — You</legend>' +
-    '<div class="field"><label for="{id}-name">Full name(s)</label><input id="{id}-name" name="name" type="text" autocomplete="name" placeholder="Both partners, if you wish"><p class="err" data-err></p></div>' +
-    '<div class="field"><label for="{id}-email">Email</label><input id="{id}-email" name="email" type="email" autocomplete="email" placeholder="you@email.com"><p class="err" data-err></p></div>' +
-    '<div class="field"><label for="{id}-phone">Phone / WhatsApp</label><input id="{id}-phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 &hellip;"><p class="err" data-err></p></div>' +
+    '<div class="field"><label for="{id}-name">Full name(s)</label><input id="{id}-name" name="name" type="text" autocomplete="name" placeholder="Both partners, if you wish"><p class="err" data-err aria-live="polite"></p></div>' +
+    '<div class="field"><label for="{id}-email">Email</label><input id="{id}-email" name="email" type="email" autocomplete="email" placeholder="you@email.com"><p class="err" data-err aria-live="polite"></p></div>' +
+    '<div class="field"><label for="{id}-phone">Phone / WhatsApp</label><input id="{id}-phone" name="phone" type="tel" autocomplete="tel" placeholder="+1 &hellip;"><p class="err" data-err aria-live="polite"></p></div>' +
     '<div class="field"><span class="glabel" id="{id}-found-l">How did you find us?</span>' +
     '<div class="choices" role="group" aria-labelledby="{id}-found-l" data-name="found" data-single>' +
     chips(["Instagram", "Referral", "Press", "Google / AI search", "Other"]) +
@@ -47,16 +47,16 @@
     '<div class="field"><span class="glabel" id="{id}-inv-l">To serve you fully, we design celebrations from a certain scale of investment. Please select your range.</span>' +
     '<div class="tiers" role="group" aria-labelledby="{id}-inv-l" data-name="investment">' +
     tiers(["$100,000 – $250,000", "$250,000 – $500,000", "$500,000 – $1,000,000", "$1,000,000 +", "Prefer to discuss privately"]) +
-    '</div><p class="err" data-err></p></div></fieldset>' +
+    '</div><p class="err" data-err aria-live="polite"></p></div></fieldset>' +
 
     '<fieldset class="step" data-step="5"><legend class="sk">V — A last word</legend>' +
     '<div class="field"><label for="{id}-last">Anything else we should know?</label><textarea id="{id}-last" name="lastword" placeholder="Optional"></textarea></div>' +
     '<div class="field"><label class="gdpr"><input type="checkbox" name="consent" value="yes"> I agree to be contacted by Madame Wedding Design regarding my enquiry.</label>' +
-    '<label class="gdpr"><input type="checkbox" name="journal" value="yes"> Receive our journal.</label><p class="err" data-err></p></div></fieldset>' +
+    '<label class="gdpr"><input type="checkbox" name="journal" value="yes"> Receive our journal.</label><p class="err" data-err aria-live="polite"></p></div></fieldset>' +
 
     '<div class="fnav"><button type="button" class="btn ghost" data-back style="visibility:hidden">Back</button>' +
     '<button type="button" class="btn" data-next>Continue</button></div>' +
-    '<p class="err" data-submit-err style="text-align:center;margin-top:26px;"></p>' +
+    '<p class="err" data-submit-err aria-live="polite" style="text-align:center;margin-top:26px;"></p>' +
     "</form>" +
     '<div class="confirm" role="status"><p class="h">Thank you.</p><p>Your celebration has our full attention. We reply to every enquiry within 48 hours.</p></div>' +
     "</div>";
@@ -146,7 +146,7 @@
 
     function render() {
       steps.forEach(function (s) { s.classList.toggle("active", +s.dataset.step === step); });
-      bar.style.width = (step / total * 100) + "%";
+      bar.style.transform = "scaleX(" + (step / total) + ")";
       back.style.visibility = step === 1 ? "hidden" : "visible";
       next.textContent = step === total ? "Send enquiry" : "Continue";
       var focusable = root.querySelector(".step.active input, .step.active textarea, .step.active [data-value]");

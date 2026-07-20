@@ -19,7 +19,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/favicon/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 <script type="application/ld+json">
 {
@@ -85,17 +85,21 @@
 <!-- ===== MASTHEAD — always at the very top, never sticky ===== -->
 <header class="masthead">
   <div class="rule"></div><div class="rule thin"></div>
-  <a class="brand" href="/"><img src="/assets/brand/logo-espresso.png" alt="Madame Wedding Design"></a>
+  <a class="brand" href="/"><img src="/assets/brand/logo-espresso.png" alt="Madame Wedding Design" width="817" height="363"></a>
   <p class="tag">Full Wedding Planning Service &amp; Production &mdash; Worldwide</p>
-  <nav aria-label="Main">
+</header>
+<nav class="mainnav" aria-label="Main">
+  <a class="nav-cipher" href="/" aria-label="Madame Wedding Design &mdash; home"><img src="/assets/brand/cipher-espresso.png" alt="" width="198" height="123"></a>
+  <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+  <div class="nav-links" id="site-menu">
     <a href="/the-house/">The House</a>
     <a href="/weddings/">Weddings</a>
     <a href="/services/">Services</a>
     <a href="/journal/">Journal</a>
     <a href="/press/">Press</a>
     <a href="/inquire/">Enquiries</a>
-  </nav>
-</header>
+  </div>
+</nav>
 
 <!-- ===== FILM HERO — plays with sound after Enter ===== -->
 <section id="filmhero" aria-label="The film">
@@ -141,42 +145,34 @@
   </div>
 </section>
 
-<!-- ===== RECENT COMMISSIONS — exactly three spreads; the rest live at /weddings/ ===== -->
-<section id="commissions" class="wrap" aria-labelledby="commissions-h">
-  <div class="sechead rv" style="margin-top:16vh;"><div class="rule"></div><span class="k">Selected weddings</span><h2 id="commissions-h">Recent commissions</h2></div>
+<!-- ===== RECENT COMMISSIONS — exactly three plates, hung like a private collection;
+     the rest live at /weddings/ ===== -->
+<section id="commissions" aria-labelledby="commissions-h">
+  <div class="sechead rv"><div class="rule"></div><span class="k">Selected weddings</span><h2 id="commissions-h">Recent commissions</h2></div>
 
-  <article class="spread rv">
-    <div class="img">
-      <figure class="media" data-media="assets/img/weddings/sophie-gordon/01.jpg" data-alt="Long ivory-linen dinner table under Tuscan oaks at Sophie and Gordon's Castiglion del Bosco wedding"></figure>
-    </div>
-    <div class="txt">
-      <span class="k">Tuscany &mdash; 2026</span>
-      <h3>Sophie &amp; Gordon, Castiglion del Bosco</h3>
-      <p>A New York couple with Texas roots; a three-day celebration across a thousand-year estate in the Val d'Orcia &mdash; every supper, transfer and tablescape produced by the house.</p>
+  <article class="plate rv">
+    <figure class="media" data-media="assets/img/weddings/sophie-gordon/01.jpg" data-alt="Long ivory-linen dinner table under Tuscan oaks at Sophie and Gordon's Castiglion del Bosco wedding"></figure>
+    <div class="plate-c">
+      <h3>Castiglion del Bosco <em>&mdash; Tuscany, 2026</em></h3>
+      <p class="who">Sophie &amp; Gordon, a New York couple with Texas roots. Three days across a thousand-year estate in the Val d'Orcia &mdash; every supper, transfer and tablescape produced by the house.</p>
       <a class="link" href="/weddings/sophie-gordon-castiglion-del-bosco/">Read the commission</a>
     </div>
   </article>
 
-  <article class="spread rev rv">
-    <div class="img">
-      <figure class="media" data-media="assets/img/weddings/vintage-chanel-bride/01.jpg" data-alt="Paris bride in a pink vintage Chanel gown once worn by Claudia Schiffer on the runway, photographed for Vogue"></figure>
-    </div>
-    <div class="txt">
-      <span class="k">Paris &mdash; seven editions of Vogue</span>
-      <h3>The vintage-Chanel bride, Paris</h3>
-      <p>A gown that once walked a Chanel runway on Claudia Schiffer, a Paris evening produced by the house, and a wedding published in seven editions of Vogue &mdash; from London to Sydney.</p>
+  <article class="plate rv">
+    <figure class="media" data-media="assets/img/weddings/vintage-chanel-bride/01.jpg" data-alt="Paris bride in a pink vintage Chanel gown once worn by Claudia Schiffer on the runway, photographed for Vogue"></figure>
+    <div class="plate-c">
+      <h3>The vintage-Chanel bride <em>&mdash; Paris, seven editions of Vogue</em></h3>
+      <p class="who">A gown that once walked a Chanel runway on Claudia Schiffer, an evening produced by the house, and a wedding published from London to Sydney.</p>
       <a class="link" href="/weddings/vintage-chanel-bride-paris/">Read the commission</a>
     </div>
   </article>
 
-  <article class="spread rv">
-    <div class="img">
-      <figure class="media" data-media="assets/img/weddings/jessica-chris/01.jpg" data-alt="Jessica and Chris's candlelit wedding dinner at Shangri-La Paris with the Eiffel Tower beyond the windows"></figure>
-    </div>
-    <div class="txt">
-      <span class="k">Paris &mdash; featured in Brides</span>
-      <h3>Jessica &amp; Chris, Shangri-La Paris</h3>
-      <p>A palace evening above the Seine for an American couple &mdash; opulent and intimate at once, and featured in Brides.</p>
+  <article class="plate rv">
+    <figure class="media" data-media="assets/img/weddings/jessica-chris/01.jpg" data-alt="Jessica and Chris's candlelit wedding dinner at Shangri-La Paris with the Eiffel Tower beyond the windows"></figure>
+    <div class="plate-c">
+      <h3>Shangri-La Paris <em>&mdash; featured in Brides</em></h3>
+      <p class="who">Jessica &amp; Chris, an American couple; a palace evening above the Seine &mdash; opulent and intimate at once.</p>
       <a class="link" href="/weddings/jessica-chris-shangri-la-paris/">Read the commission</a>
     </div>
   </article>
@@ -206,8 +202,8 @@
   <div class="stats rv">
     <p class="stat"><b>7</b><span>editions of Vogue</span></p>
     <p class="stat"><b>20+</b><span>press features</span></p>
-    <p class="stat"><b>15 Best in Europe</b><span>The Wed</span></p>
-    <p class="stat"><b>Top 5 Paris &middot; Top 10 France</b><span>Wezoree</span></p>
+    <p class="stat"><b class="t">15 Best in Europe</b><span>The Wed</span></p>
+    <p class="stat"><b class="t">Top 5 Paris &middot; Top 10 France</b><span>Wezoree</span></p>
   </div>
 
   <!-- Logo wall — each name links OUT to the actual feature (URLs mirrored in data/press.json).
