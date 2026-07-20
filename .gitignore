@@ -28,3 +28,4 @@ assets/audio/*.mp3
 
 # Committed exception: the enquiry-form reel (compressed to web weight)
 !assets/video/enquiries.mp4
+!assets/video/enquiries.webm
