@@ -25,11 +25,30 @@
   }
 
   function hydrate(media) {
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     document.querySelectorAll("figure.media[data-media]").forEach(function (fig) {
       var file = fig.getAttribute("data-media");
       var entry = lookup(media, file);
       var alt = entry ? entry.alt : (fig.getAttribute("data-alt") || "");
       var caption = entry && entry.caption ? entry.caption : "";
+
+      /* Optional film: <figure data-video="assets/video/…"> plays a muted loop
+         when the file exists (and motion is allowed); otherwise falls back to
+         the photo, then to the placeholder. */
+      var videoSrc = fig.getAttribute("data-video");
+      if (videoSrc && !reduced) {
+        var v = document.createElement("video");
+        v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
+        v.setAttribute("playsinline", ""); v.preload = "metadata";
+        v.setAttribute("aria-label", alt);
+        v.addEventListener("loadeddata", function () {
+          fig.insertBefore(v, fig.firstChild);
+          var p = v.play(); if (p && p.catch) p.catch(function () {});
+        }, { once: true });
+        v.addEventListener("error", function () { v.remove(); }, true);
+        v.src = ROOT + "/" + videoSrc;
+      }
+
       var img = new Image();
       img.onload = function () {
         img.alt = alt;
