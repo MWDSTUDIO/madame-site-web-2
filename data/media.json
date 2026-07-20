@@ -226,6 +226,76 @@
       "keywords": ["private estate wedding production"]
     },
     {
+      "file": "assets/brand/logo-espresso.png",
+      "page": "site-wide (masthead, footer contexts on ivory)",
+      "alt": "Madame Wedding Design logo — Madame in espresso script above Wedding Design in letterspaced capitals",
+      "caption": "Primary logo, espresso declination",
+      "keywords": ["Madame Wedding Design logo"]
+    },
+    {
+      "file": "assets/brand/logo-hunter.png",
+      "page": "print and stationery contexts on light grounds (not used on the site)",
+      "alt": "Madame Wedding Design logo in hunter green — Madame script above Wedding Design capitals",
+      "caption": "Primary logo, hunter declination",
+      "keywords": ["Madame Wedding Design logo"]
+    },
+    {
+      "file": "assets/brand/logo-ivory.png",
+      "page": "/ (entry threshold) and over dark photography",
+      "alt": "Madame Wedding Design logo in ivory — Madame script above Wedding Design capitals",
+      "caption": "Primary logo, ivory declination",
+      "keywords": ["Madame Wedding Design logo"]
+    },
+    {
+      "file": "assets/brand/cipher-espresso.png",
+      "page": "site-wide (masthead watermark, footer) — decorative, empty alt in situ",
+      "alt": "Interlocked MWD monogram of Madame Wedding Design in espresso",
+      "caption": "MWD cipher, espresso",
+      "keywords": ["MWD monogram"]
+    },
+    {
+      "file": "assets/brand/cipher-hunter.png",
+      "page": "print and stationery contexts (not used on the site)",
+      "alt": "Interlocked MWD monogram of Madame Wedding Design in hunter green",
+      "caption": "MWD cipher, hunter",
+      "keywords": ["MWD monogram"]
+    },
+    {
+      "file": "assets/brand/cipher-ivory.png",
+      "page": "/ (entry threshold watermark) — decorative, empty alt in situ",
+      "alt": "Interlocked MWD monogram of Madame Wedding Design in ivory",
+      "caption": "MWD cipher, ivory",
+      "keywords": ["MWD monogram"]
+    },
+    {
+      "file": "assets/brand/avatar-espresso.png",
+      "page": "social profiles (espresso disc avatar)",
+      "alt": "Madame Wedding Design avatar — ivory MWD monogram knocked out of an espresso disc",
+      "caption": "Avatar, espresso",
+      "keywords": ["Madame Wedding Design avatar"]
+    },
+    {
+      "file": "assets/brand/avatar-hunter.png",
+      "page": "social profiles (hunter disc avatar)",
+      "alt": "Madame Wedding Design avatar — ivory MWD monogram knocked out of a hunter green disc",
+      "caption": "Avatar, hunter",
+      "keywords": ["Madame Wedding Design avatar"]
+    },
+    {
+      "file": "assets/brand/lockup-espresso.png",
+      "page": "compact brand lockup, espresso (reserved)",
+      "alt": "Madame Wedding Design compact lockup — Madame script over Wedding Design on two lines, espresso",
+      "caption": "Lockup, espresso",
+      "keywords": ["Madame Wedding Design lockup"]
+    },
+    {
+      "file": "assets/brand/lockup-hunter.png",
+      "page": "compact brand lockup, hunter (reserved for light print contexts)",
+      "alt": "Madame Wedding Design compact lockup — Madame script over Wedding Design on two lines, hunter green",
+      "caption": "Lockup, hunter",
+      "keywords": ["Madame Wedding Design lockup"]
+    },
+    {
       "file": "assets/img/inquire/the-atelier.jpg",
       "page": "/inquire/ and home enquiry section",
       "alt": "Hand-addressed envelopes and a table plan in the atelier of Madame Wedding Design, before a celebration",

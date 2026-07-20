@@ -272,6 +272,17 @@ footer.site .fnavlinks{display:flex;gap:22px;flex-wrap:wrap;}
 /* ---------- Private circle entry (home threshold) ---------- */
 #intro{position:fixed;inset:0;z-index:200;background:var(--threshold);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--ivory);transition:opacity 1.8s ease,visibility 1.8s ease;padding:20px;}
 #intro .seal{width:min(210px,46vw);margin-bottom:8px;}
+/* Logo suite: the master's embossed cipher is recreated as a watermark layer
+   (monogram at 7% opacity behind the lettering) — adaptive to any background. */
+#intro .sas-logo{position:relative;display:block;width:min(360px,74vw);margin-bottom:8px;}
+#intro .sas-logo::before{content:"";position:absolute;inset:-42% -16%;background:url("/assets/brand/cipher-ivory.png") center/contain no-repeat;opacity:.07;}
+#intro .sas-logo img{width:100%;position:relative;}
+.masthead .brand{position:relative;display:inline-block;padding:24px 20px 10px;}
+.masthead .brand img{height:clamp(56px,7.5vw,88px);width:auto;position:relative;}
+.masthead .brand::before{content:"";position:absolute;left:50%;top:52%;width:132px;height:118px;transform:translate(-50%,-50%);
+  background:url("/assets/brand/cipher-espresso.png") center/contain no-repeat;opacity:.07;pointer-events:none;}
+footer.site .fbrand{text-align:center;margin-bottom:22px;}
+footer.site .fbrand img{height:34px;display:inline-block;opacity:.92;}
 #intro .line{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(26px,4.2vw,42px);margin:26px 0 10px;}
 #intro .sub{font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;opacity:.65;}
 #intro button{margin-top:54px;background:none;border:1px solid rgba(247,244,238,.45);color:var(--ivory);font-family:var(--body);font-size:11px;letter-spacing:.34em;text-transform:uppercase;padding:17px 56px;cursor:pointer;transition:background .6s,color .6s,letter-spacing .6s;}
