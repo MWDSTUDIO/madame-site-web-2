@@ -328,11 +328,9 @@ html.js .rv.in{opacity:1;transform:none;}
 /* ---------- Private circle entry (home threshold) ---------- */
 #intro{position:fixed;inset:0;z-index:var(--z-overlay);background:var(--threshold);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--ivory);transition:opacity 1.8s ease,visibility 1.8s ease;padding:20px;}
 #intro .seal{width:min(210px,46vw);margin-bottom:8px;}
-/* Logo suite: the master's embossed cipher is recreated as a watermark layer
-   (monogram at 7% opacity behind the lettering) — adaptive to any background. */
-#intro .sas-logo{position:relative;display:block;width:min(360px,74vw);margin-bottom:8px;}
-#intro .sas-logo::before{content:"";position:absolute;inset:-42% -16%;background:url("/assets/brand/cipher-ivory.png") center/contain no-repeat;opacity:.07;}
-#intro .sas-logo img{width:100%;position:relative;}
+/* The embossed board (ivory on hunter) opens the threshold; its baked hunter
+   ground is the sas color, so it reads as engraving on the door itself. */
+#intro .sas-board{width:min(560px,86vw);height:auto;margin:-4vh 0 -3vh;}
 .masthead .brand{position:relative;display:inline-block;padding:24px 20px 10px;}
 .masthead .brand img{height:clamp(56px,7.5vw,88px);width:auto;position:relative;}
 .masthead .brand::before{content:"";position:absolute;left:50%;top:52%;width:132px;height:118px;transform:translate(-50%,-50%);
