@@ -35,7 +35,8 @@ body.letter{background:var(--threshold);overflow:hidden;}
   line-height:1.2;margin-top:34px;opacity:0;animation:appear 1.2s ease 2.6s forwards;}
 
 /* The curtains: two ivory panels drawing closed, hushed and slow */
-.curtain{position:fixed;top:0;bottom:0;width:51vw;background:var(--ivory);z-index:calc(var(--z-overlay) + 1);}
+/* Curtains in the sand of the logo suite — the final view IS the brand board */
+.curtain{position:fixed;top:0;bottom:0;width:51vw;background:#DBD3C0;z-index:calc(var(--z-overlay) + 1);}
 .curtain.left{left:0;transform:translateX(-102%);animation:drawL 2.6s cubic-bezier(.6,.05,.28,.99) 7.2s forwards;}
 .curtain.right{right:0;transform:translateX(102%);animation:drawR 2.6s cubic-bezier(.6,.05,.28,.99) 7.2s forwards;}
 @keyframes drawL{to{transform:translateX(0);}}
@@ -45,7 +46,10 @@ body.letter{background:var(--threshold);overflow:hidden;}
 .cachet{position:fixed;inset:0;z-index:calc(var(--z-overlay) + 2);
   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:52px;
   opacity:0;transform:scale(1.05);animation:settle 1.8s ease 9.6s forwards;pointer-events:none;}
-.cachet img{width:min(320px,64vw);height:auto;}
+.cachet .mark{position:relative;display:flex;align-items:center;justify-content:center;}
+.cachet .mark::before{content:"";position:absolute;inset:-58% -34%;
+  background:url("/assets/brand/cipher-hunter.png") center/contain no-repeat;opacity:.09;}
+.cachet .mark img{position:relative;width:min(340px,66vw);height:auto;}
 .cachet .back{pointer-events:auto;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;
   color:var(--ink);border-bottom:1px solid var(--ink-15);padding:10px 2px 6px;transition:border-color .5s;}
 .cachet .back:hover{border-color:var(--ink);}
@@ -59,7 +63,7 @@ body.letter{background:var(--threshold);overflow:hidden;}
   .letter-scene,.letter-scene .dear,.letter-scene p.msg,.letter-scene .thanks{opacity:1;animation:none;}
   .curtain{display:none;}
   .cachet{position:static;opacity:1;transform:none;animation:none;margin:40px 0 60px;gap:32px;}
-  .cachet img{display:none;}
+  .cachet .mark{display:none;}
   .cachet img.rm{display:block;width:min(220px,50vw);}
   .cachet .back{color:var(--ivory);border-color:rgba(247,244,238,.35);}
   body.letter{overflow:auto;}
@@ -78,7 +82,7 @@ body.letter{background:var(--threshold);overflow:hidden;}
 <div class="curtain right" aria-hidden="true"></div>
 
 <div class="cachet">
-  <img src="/assets/brand/logo-hunter.png" alt="" aria-hidden="true" width="817" height="363">
+  <span class="mark"><img src="/assets/brand/logo-hunter.png" alt="" aria-hidden="true" width="817" height="363"></span>
   <img class="rm" src="/assets/brand/logo-ivory.png" alt="" aria-hidden="true" width="817" height="363">
   <a class="back" href="/">Return to the house</a>
 </div>
