@@ -201,6 +201,8 @@
         body: body
       }).then(function (r) {
         if (!r.ok) throw new Error("send failed");
+        /* Leave the name for the thank-you letter ("Dear …"). */
+        try { sessionStorage.setItem("mwd-enquiry-name", form.name.value.trim()); } catch (e) {}
         window.location.href = CONFIG.THANK_YOU_URL || "/inquire/thank-you/";
       }).catch(function () {
         next.disabled = false;

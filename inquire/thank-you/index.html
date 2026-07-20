@@ -17,40 +17,69 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/site.css">
 <style>
-/* The circle closes: the ivory page is enclosed by the hunter sas, then the
-   monogram surfaces — the mirror of the entry threshold. Reduced motion gets
-   the finished scene instantly. */
+/* The circle closes — sooner — and an invitation is read: their name, a word
+   from the house, thank you, and the seal pressed like a wax cachet.
+   Hunter + ivory only. Reduced motion receives the finished letter at once. */
 body.sas-close{background:var(--ivory);overflow:hidden;}
 .sas{position:fixed;inset:0;z-index:var(--z-overlay);background:var(--threshold);
   display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
   color:var(--ivory);padding:24px;
-  clip-path:circle(0% at 50% 50%);animation:sasclose 2s cubic-bezier(.22,1,.36,1) .35s forwards;}
+  clip-path:circle(0% at 50% 50%);animation:sasclose 1.5s cubic-bezier(.22,1,.36,1) .15s forwards;}
 @keyframes sasclose{to{clip-path:circle(120% at 50% 50%);}}
-.sas .cipher{width:min(150px,36vw);opacity:0;transform:scale(1.08);
-  animation:surface 1.4s ease 1.6s forwards;}
-.sas .line{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(30px,4.6vw,48px);
-  line-height:1.2;text-wrap:balance;margin:30px 0 14px;opacity:0;animation:surface 1.3s ease 2.1s forwards;}
-.sas p.msg{max-width:44ch;font-size:17.5px;line-height:1.8;color:rgba(247,244,238,.82);
-  opacity:0;animation:surface 1.3s ease 2.5s forwards;}
-.sas .back{margin-top:48px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;
-  border:1px solid rgba(247,244,238,.45);padding:15px 40px;color:var(--ivory);
-  transition:background .6s,color .6s;opacity:0;animation:surface 1.3s ease 2.9s forwards;}
-.sas .back:hover{background:var(--ivory);color:var(--threshold);}
+
+.sas .dear{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(24px,3.4vw,34px);
+  line-height:1.3;text-wrap:balance;opacity:0;animation:surface 1.2s ease 1.4s forwards;}
+.sas p.msg{max-width:46ch;margin-top:22px;font-size:18px;line-height:1.9;color:rgba(247,244,238,.85);
+  text-wrap:pretty;opacity:0;animation:surface 1.2s ease 2s forwards;}
+.sas .thanks{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(28px,4vw,42px);
+  line-height:1.2;margin-top:34px;opacity:0;animation:surface 1.2s ease 2.6s forwards;}
+
+/* The cachet: the house seal pressed onto the letter */
+.sas .cachet{width:min(150px,34vw);margin-top:38px;opacity:0;transform:scale(1.22) rotate(-5deg);
+  animation:press .9s cubic-bezier(.3,1.1,.45,1) 3.2s forwards;}
+@keyframes press{60%{opacity:1;}to{opacity:1;transform:scale(1) rotate(0deg);}}
+
+.sas .back{margin-top:44px;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;
+  color:rgba(247,244,238,.7);border-bottom:1px solid rgba(247,244,238,.3);padding:10px 2px 6px;
+  transition:color .5s,border-color .5s;opacity:0;animation:surface 1.2s ease 3.9s forwards;}
+.sas .back:hover{color:var(--ivory);border-color:var(--ivory);}
 @keyframes surface{to{opacity:1;transform:none;}}
+
 @media(prefers-reduced-motion:reduce){
   .sas{clip-path:none;animation:none;}
-  .sas .cipher,.sas .line,.sas p.msg,.sas .back{opacity:1;transform:none;animation:none;}
+  .sas .dear,.sas p.msg,.sas .thanks,.sas .cachet,.sas .back{opacity:1;transform:none;animation:none;}
 }
 </style>
 </head>
 <body class="sas-close">
 
 <main class="sas" id="main">
-  <img class="cipher" src="/assets/brand/cipher-ivory.png" alt="" aria-hidden="true" width="198" height="123">
-  <h1 class="line">Thank you.</h1>
-  <p class="msg">Your celebration has our full attention. The house replies to every enquiry &mdash; personally, within 48 hours.</p>
+  <p class="dear"><span data-dear>Dear friends</span>,</p>
+  <p class="msg">Your enquiry has entered the house. It will be read the way everything here is handled &mdash; personally, and in confidence. Estelle will write to you within forty-eight hours.</p>
+  <h1 class="thanks">Thank you.</h1>
+  <img class="cachet" src="/assets/brand/seal.svg" alt="" aria-hidden="true" width="240" height="240">
   <a class="back" href="/">Return to the house</a>
 </main>
 
+<script>
+/* The enquiry form leaves the visitor's name for the letter; nothing is sent
+   anywhere from here. Falls back to "Dear friends" gracefully. Runs now and
+   again on DOMContentLoaded — idempotent, whatever the parser timing. */
+(function () {
+  function address() {
+    try {
+      var n = sessionStorage.getItem("mwd-enquiry-name");
+      if (!n) return;
+      n = n.trim().replace(/\s+/g, " ");
+      var el = document.querySelector("[data-dear]");
+      if (!el || !n.length || n.length > 60) return;
+      el.textContent = "Dear " + n;
+      sessionStorage.removeItem("mwd-enquiry-name");
+    } catch (e) { /* private mode: the letter stays addressed to friends */ }
+  }
+  address();
+  document.addEventListener("DOMContentLoaded", address);
+})();
+</script>
 </body>
 </html>
