@@ -189,16 +189,29 @@
       next.disabled = true;
       next.textContent = "Sending…";
       submitErr.classList.remove("show");
-      /* Netlify Forms: urlencoded POST to any path on the site; the submission
-         appears in the dashboard table. Success leads to the closing of the
-         circle — /inquire/thank-you/. */
-      var body = Object.entries(payload()).map(function (kv) {
+      var data = payload();
+
+      /* Parallel lane — Netlify Forms: silent until detection is enabled in
+         the Netlify UI, then the dashboard table fills up too. Fire and forget. */
+      var urlencoded = Object.entries(data).map(function (kv) {
         return encodeURIComponent(kv[0]) + "=" + encodeURIComponent(kv[1]);
       }).join("&");
       fetch("/inquire/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body
+        body: urlencoded
+      }).catch(function () {});
+
+      /* Primary lane — FormSubmit: the table email straight to the inbox. */
+      var fs = Object.assign({}, data, {
+        _subject: "New enquiry — " + (data.name || "unnamed") + (data.destination ? " · " + data.destination : "") + " | Madame Wedding Design",
+        _template: "table"
+      });
+      delete fs["form-name"]; delete fs["bot-field"];
+      fetch(CONFIG.FORMSUBMIT_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(fs)
       }).then(function (r) {
         if (!r.ok) throw new Error("send failed");
         /* Leave the name for the thank-you letter ("Dear …"). */
