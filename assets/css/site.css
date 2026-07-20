@@ -331,10 +331,9 @@ html.js .rv.in{opacity:1;transform:none;}
 /* The embossed board (ivory on hunter) opens the threshold; its baked hunter
    ground is the sas color, so it reads as engraving on the door itself. */
 #intro .sas-board{width:min(560px,86vw);height:auto;margin:-4vh 0 -3vh;}
-.masthead .brand{position:relative;display:inline-block;padding:24px 20px 10px;}
-.masthead .brand img{height:clamp(56px,7.5vw,88px);width:auto;position:relative;}
-.masthead .brand::before{content:"";position:absolute;left:50%;top:52%;width:132px;height:118px;transform:translate(-50%,-50%);
-  background:url("/assets/brand/cipher-espresso.png") center/contain no-repeat;opacity:.07;pointer-events:none;}
+.masthead .brand{display:inline-block;padding:12px 20px 2px;}
+/* The embossed board itself, on the page's own ivory — relief baked in */
+.masthead .brand img{height:clamp(118px,15vw,172px);width:auto;}
 footer.site .fbrand{text-align:center;margin-bottom:22px;}
 footer.site .fbrand img{height:34px;display:inline-block;opacity:.92;}
 #intro .line{font-family:var(--display);font-style:italic;font-weight:300;font-size:clamp(26px,4.2vw,42px);margin:26px 0 10px;line-height:1.25;text-wrap:balance;}
