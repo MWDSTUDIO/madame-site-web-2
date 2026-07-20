@@ -87,7 +87,7 @@
 <!-- Netlify Forms registration: parsed at deploy time so submissions appear
      in the Netlify dashboard (Forms -> enquiry). The couture multi-step form
      posts to it via AJAX (assets/js/enquiry-form.js). Keep field names in sync. -->
-<form name="enquiry" data-netlify="true" netlify-honeypot="bot-field" hidden aria-hidden="true">
+<form name="enquiry" method="POST" action="/inquire/thank-you/" data-netlify="true" netlify-honeypot="bot-field" hidden aria-hidden="true">
   <input type="text" name="bot-field">
   <input type="text" name="name">
   <input type="email" name="email">

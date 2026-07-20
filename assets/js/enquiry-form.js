@@ -195,7 +195,7 @@
       var body = Object.entries(payload()).map(function (kv) {
         return encodeURIComponent(kv[0]) + "=" + encodeURIComponent(kv[1]);
       }).join("&");
-      fetch("/", {
+      fetch("/inquire/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: body
