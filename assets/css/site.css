@@ -42,7 +42,9 @@ a{color:inherit;text-decoration:none;}
 .ph-film{background-color:#4A4238;}
 figure.media{margin:0;}
 figure.media .ph{width:100%;height:100%;position:absolute;inset:0;}
-figure.media{position:relative;overflow:hidden;}
+/* Chaque cadre porte un fond sable : la page n'a jamais de trou blanc,
+   même avant que la photographie ne soit arrivée. */
+figure.media{position:relative;overflow:hidden;background-color:#EAE4D8;}
 figure.media img,figure.media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 /* La légende se pose SOUS l'image, en petites capitales. Plus de voile
    dégradé posé sur la photographie : rien ne recouvre l'image. */
