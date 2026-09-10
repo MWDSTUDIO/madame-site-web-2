@@ -46,7 +46,7 @@
     '<fieldset class="step" data-step="4"><legend class="sk">IV — Investment</legend>' +
     '<div class="field"><span class="glabel" id="{id}-inv-l">To serve you fully, we design celebrations from a certain scale of investment. Please select your range.</span>' +
     '<div class="tiers" role="group" aria-labelledby="{id}-inv-l" data-name="investment">' +
-    tiers(["$100,000 – $250,000", "$250,000 – $500,000", "$500,000 – $1,000,000", "$1,000,000 +", "Prefer to discuss privately"]) +
+    tiers(["$250,000 – $500,000", "$500,000 – $1,000,000", "$1,000,000 +", "Prefer to discuss privately"]) +
     '</div><p class="err" data-err aria-live="polite"></p></div></fieldset>' +
 
     '<fieldset class="step" data-step="5"><legend class="sk">V — A last word</legend>' +

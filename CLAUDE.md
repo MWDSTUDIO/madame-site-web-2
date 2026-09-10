@@ -15,7 +15,7 @@
   visible copy to Paris.
 - Three services only: Full Wedding Planning & Production / Creative Direction /
   Destination & Logistics. NEVER "partial planning" or "month-of".
-- Budgets: nothing under $100,000; threshold stated only in FAQ + Investment step.
+- Budgets: nothing under $250,000; threshold stated only in FAQ + Investment step.
 - Version C voice: concrete, editorial, Easton/Marcy Blum register; banned
   vocabulary: dream wedding, magical, fairy tale. Portfolio sections use wedding
   language ("Our latest weddings", "Wedding highlights" — Estelle, 20/07/2026);
