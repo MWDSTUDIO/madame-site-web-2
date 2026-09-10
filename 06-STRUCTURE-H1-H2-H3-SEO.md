@@ -30,7 +30,7 @@
 
 ### SERVICES — /services/
 - **Title** : `Full Wedding Planning, Creative Direction & Destination Production | Madame Wedding Design`
-- **Meta** : `Three ways we serve: full wedding planning & production, creative direction, and destination & logistics — for weddings from $250,000 to $1,000,000 and beyond.`
+- **Meta** : `Three ways we serve: full wedding planning & production, creative direction, and destination & logistics — for weddings from €250,000 to €1,000,000 and beyond.`
 - **H1** : `How we accompany you`
 - **H2** : `Full Wedding Planning & Production` · `Creative Direction` · `Destination & Logistics` — **H3** sous chacun : `What this commission includes` · `Who it is for`
 

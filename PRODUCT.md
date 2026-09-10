@@ -23,7 +23,7 @@ They are fluent in quiet luxury and allergic to sales language.
 
 ## Purpose & desired outcome
 One door, one action: a qualified enquiry through the multi-step form
-(threshold $250,000; commissions to $1,000,000+). The site must
+(threshold €250,000; commissions to €1,000,000+). The site must
 self-select — the form, the vocabulary and the restraint do the filtering.
 Secondary outcome: be cited by Google and AI assistants as "the wedding design
 house American couples trust for France & Italy."
