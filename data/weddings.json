@@ -7,6 +7,7 @@
       "couple": "Sophie & Gordon",
       "year": "2026",
       "venue": "Rosewood Castiglion del Bosco",
+      "cover": "assets/img/weddings/sophie-gordon/01.jpg",
       "region": "Tuscany",
       "hub": "tuscany",
       "origin": {
@@ -41,6 +42,7 @@
       "couple": "Chloé & her husband",
       "year": "TODO",
       "venue": "Paris",
+      "cover": "assets/img/weddings/vintage-chanel-bride/01.jpg",
       "region": "Paris",
       "hub": "paris",
       "origin": {
@@ -100,6 +102,7 @@
       "couple": "Jessica & Chris",
       "year": "TODO",
       "venue": "Shangri-La Paris",
+      "cover": "assets/img/weddings/jessica-chris/02.jpg",
       "region": "Paris",
       "hub": "paris",
       "origin": {
@@ -139,6 +142,7 @@
       "couple": "Claire & Jack",
       "year": "2026",
       "venue": "Borgo Stomennano",
+      "cover": "assets/img/weddings/claire-jack/03.jpg",
       "region": "Tuscany",
       "hub": "tuscany",
       "origin": {
@@ -178,6 +182,7 @@
       "couple": "Landen & her husband",
       "year": "TODO",
       "venue": "Hôtel d'Évreux",
+      "cover": "assets/img/weddings/landen/02.jpg",
       "region": "Paris",
       "hub": "paris",
       "origin": {
@@ -212,6 +217,7 @@
       "couple": "Aimee Connolly & John Greene",
       "year": "TODO",
       "venue": "Private château, Burgundy",
+      "cover": "assets/img/weddings/aimee-john/08.jpg",
       "region": "Burgundy",
       "hub": "burgundy",
       "origin": {
@@ -250,6 +256,7 @@
       "couple": "Agatha & her husband",
       "year": "TODO",
       "venue": "Private villa, Rosewood Castiglion del Bosco",
+      "cover": "assets/img/weddings/agatha/01.jpg",
       "region": "Tuscany",
       "hub": "tuscany",
       "origin": {
@@ -283,6 +290,7 @@
       "couple": "TODO confirm couple",
       "year": "TODO",
       "venue": "Château Martinay (TODO confirm spelling: Martinet?)",
+      "cover": "assets/img/weddings/chateau-martinay/03.jpg",
       "region": "Provence",
       "hub": "provence",
       "origin": {

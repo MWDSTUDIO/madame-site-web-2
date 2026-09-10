@@ -35,16 +35,22 @@ a{color:inherit;text-decoration:none;}
 .ph{background-color:#E6E0D4;background-size:cover;background-position:center;position:relative;}
 .ph::after{content:attr(data-label);position:absolute;left:50%;bottom:12px;transform:translateX(-50%);
   font-family:var(--body);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:rgba(38,32,26,.52);white-space:nowrap;max-width:92%;overflow:hidden;text-overflow:ellipsis;}
-.ph-1{background-image:linear-gradient(145deg,#ece6da 0%,#cfc6b4 55%,#b4a892 100%);}
-.ph-2{background-image:linear-gradient(165deg,#efe9dd 0%,#d5cbb8 100%);}
-.ph-3{background-image:linear-gradient(195deg,#e9e2d3 0%,#c2b7a1 100%);}
-.ph-4{background-image:linear-gradient(135deg,#f0ebe1 0%,#cdc3b0 100%);}
-.ph-film{background-image:linear-gradient(120deg,#3f382f 0%,#5f5647 50%,#8b7f6b 100%);}
+.ph-1{background-color:#EAE4D8;}
+.ph-2{background-color:#E6E0D4;}
+.ph-3{background-color:#E1DACD;}
+.ph-4{background-color:#EDE8DE;}
+.ph-film{background-color:#4A4238;}
 figure.media{margin:0;}
 figure.media .ph{width:100%;height:100%;position:absolute;inset:0;}
 figure.media{position:relative;overflow:hidden;}
 figure.media img,figure.media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-figure.media figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:rgba(38,32,26,.78);text-align:center;pointer-events:none;background:linear-gradient(to top,rgba(247,244,238,.82),rgba(247,244,238,0));}
+/* La légende se pose SOUS l'image, en petites capitales. Plus de voile
+   dégradé posé sur la photographie : rien ne recouvre l'image. */
+figure.media figcaption{position:absolute;left:0;right:0;top:100%;bottom:auto;padding:11px 1px 0;
+  font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-50);text-align:left;pointer-events:none;}
+.gallery figure.media,.article figure.media{overflow:visible;}
+.gallery{row-gap:64px;}
+.article figure.media{margin-bottom:34px;}
 
 /* ---------- Masthead (magazine) ---------- */
 /* The masthead runs the full width of the page on every screen: rules bleed
@@ -365,3 +371,20 @@ body.entered #soundtoggle{display:flex;}
 .admin .thumb{width:120px;height:90px;object-fit:cover;background:#E6E0D4;}
 .admin .flag{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;padding:3px 10px;border:1px solid #7A3B2E;color:#7A3B2E;margin:2px 4px 2px 0;}
 .admin .ok{border-color:var(--hunter);color:var(--hunter);}
+
+
+/* ---------- Portfolio index : cartes plutôt que lignes de titres ---------- */
+.windex .jgroup{max-width:1160px;}
+.wcover{max-width:1160px;margin:7vh auto 0;padding:0 28px;}
+.wcover figure.media{aspect-ratio:16/9;}
+.wcards{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 26px;margin-top:24px;}
+@media(max-width:900px){.wcards{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.wcards{grid-template-columns:1fr;}}
+.wcard{display:block;transition:opacity .45s ease;}
+.wcard:hover{opacity:.7;}
+.wcard figure.media{aspect-ratio:4/5;}
+.wcard .t{display:block;margin-top:15px;font-family:var(--display);font-weight:400;font-size:19.5px;line-height:1.32;text-wrap:pretty;}
+.wcard .t em{font-style:italic;color:var(--ink-50);}
+.wcard .m{display:block;margin-top:7px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-50);}
+.jmore{display:inline-block;margin-top:30px;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--hunter);border-bottom:1px solid var(--ink-15);padding-bottom:5px;}
+.jmore:hover{border-bottom-color:var(--hunter);}

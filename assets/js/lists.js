@@ -25,24 +25,35 @@
         var items = (data.commissions || []).filter(function (c) { return c.hub === hub.slug; });
         if (!items.length) return;
         var group = el("div", "jgroup");
-        var h = el("h2", null, esc(hub.name));
-        group.appendChild(h);
+        group.appendChild(el("h2", null, esc(hub.name)));
+        /* Chaque commission est une carte : la photographie d'abord, puis le
+           titre descriptif (celui que le référencement lit) et la provenance
+           des mariés. Le titre reste intact, seule sa présentation change. */
+        var cards = el("div", "wcards");
         items.forEach(function (c) {
-          var a = el("a", "jrow");
+          var a = el("a", "wcard");
           a.href = "/weddings/" + c.slug + "/";
+          if (c.cover) {
+            var fig = el("figure", "media");
+            fig.setAttribute("data-media", c.cover);
+            fig.setAttribute("data-nocaption", "");
+            a.appendChild(fig);
+          }
           var couple = noTodo(c.couple);
           a.appendChild(el("span", "t", esc(c.title) + (couple ? " <em>&mdash; " + esc(couple) + "</em>" : "")));
           var origin = c.origin && noTodo((c.origin.label || "").replace(/\s*\(TODO[^)]*\)/i, ""));
           a.appendChild(el("span", "m", origin ? "From " + esc(origin) : esc(hub.name)));
-          group.appendChild(a);
+          cards.appendChild(a);
         });
-        var hubLink = el("a", "jrow");
-        hubLink.href = "/weddings/" + hub.slug + "/";
-        hubLink.appendChild(el("span", "t", "<em>All weddings in " + esc(hub.name) + " &rarr;</em>"));
-        hubLink.appendChild(el("span", "m", "The hub"));
-        group.appendChild(hubLink);
+        group.appendChild(cards);
+        var more = el("a", "jmore", "All weddings in " + esc(hub.name) + " &rarr;");
+        more.href = "/weddings/" + hub.slug + "/";
+        group.appendChild(more);
         wIndex.appendChild(group);
       });
+      /* Les cartes viennent d'être créées : media.js leur donne leurs images,
+         leurs alts et le chargement paresseux, comme partout ailleurs. */
+      if (window.MWDMedia) window.MWDMedia.hydrate();
     }).catch(function () { /* static content already in place */ });
   }
 

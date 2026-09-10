@@ -27,6 +27,8 @@
   function hydrate(media) {
     var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     document.querySelectorAll("figure.media[data-media]").forEach(function (fig) {
+      if (fig.dataset.hydrated) return;
+      fig.dataset.hydrated = "1";
       var file = fig.getAttribute("data-media");
       var entry = lookup(media, file);
       var alt = entry ? entry.alt : (fig.getAttribute("data-alt") || "");
@@ -79,18 +81,26 @@
         v.load();
       }
 
-      var img = new Image();
-      img.onload = function () {
-        img.alt = alt;
-        img.loading = "lazy";
-        img.decoding = "async";
-        fig.insertBefore(img, fig.firstChild);
-      };
-      img.onerror = function () {
+      /* L'<img> entre dans le DOM AVANT que la source soit posée : loading="lazy"
+         n'a d'effet que s'il est présent au moment où le navigateur découvre
+         src. Posé après coup (ancien code), il ne servait à rien et les vingt-six
+         images d'une galerie se téléchargeaient toutes d'un coup. */
+      var img = document.createElement("img");
+      img.alt = alt;
+      /* Les premières images d'une galerie se chargent tout de suite : le haut
+         du bloc est rempli avant même que la visiteuse y arrive. Les suivantes
+         attendent d'approcher de l'écran. */
+      var eager = fig.getBoundingClientRect().top < window.innerHeight * 1.5;
+      img.loading = eager ? "eager" : "lazy";
+      if (eager && "fetchPriority" in img) img.fetchPriority = "high";
+      img.decoding = "async";
+      img.addEventListener("error", function () {
+        img.remove();
         placeholder(fig, caption || alt || "Madame Wedding Design");
-      };
+      });
+      fig.insertBefore(img, fig.firstChild);
       img.src = ROOT + "/" + file;
-      if (caption && !fig.querySelector("figcaption")) {
+      if (caption && !fig.hasAttribute("data-nocaption") && !fig.querySelector("figcaption")) {
         var fc = document.createElement("figcaption");
         fc.textContent = caption;
         fig.appendChild(fc);
@@ -98,10 +108,17 @@
     });
   }
 
+  var cache = null;
+  /* Les listes construites après coup (lists.js) appellent ceci pour hydrater
+     leurs figures avec les mêmes alts et légendes que le reste du site. */
+  window.MWDMedia = {
+    hydrate: function () { if (cache) hydrate(cache); }
+  };
+
   if (document.querySelector("figure.media[data-media]")) {
     fetch(ROOT + "/data/media.json")
       .then(function (r) { return r.json(); })
-      .then(function (d) { hydrate(d.media || []); })
+      .then(function (d) { cache = d.media || []; hydrate(cache); })
       .catch(function () {
         document.querySelectorAll("figure.media[data-media]").forEach(function (fig) {
           placeholder(fig, fig.getAttribute("data-alt") || "Madame Wedding Design");
