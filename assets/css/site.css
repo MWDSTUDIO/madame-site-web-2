@@ -375,18 +375,50 @@ body.entered #soundtoggle{display:flex;}
 .admin .ok{border-color:var(--hunter);color:var(--hunter);}
 
 
-/* ---------- Portfolio index : cartes plutôt que lignes de titres ---------- */
-.windex .jgroup{max-width:1160px;}
-.wcover{max-width:1160px;margin:7vh auto 0;padding:0 28px;}
-.wcover figure.media{aspect-ratio:16/9;}
-.wcards{display:grid;grid-template-columns:repeat(3,1fr);gap:34px 26px;margin-top:24px;}
-@media(max-width:900px){.wcards{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:560px){.wcards{grid-template-columns:1fr;}}
-.wcard{display:block;transition:opacity .45s ease;}
-.wcard:hover{opacity:.7;}
+/* ---------- Portfolio index — deux colonnes, proportions naturelles ----------
+   Chaque photographie garde son format d'origine : l'aspect-ratio est écrit sur
+   la figure d'après le fichier réel, donc aucun recadrage et aucun décalage de
+   mise en page pendant le chargement. Les deux colonnes se remplissent en
+   alternance, ce qui crée le décalage vertical. */
+.wcover{max-width:1180px;margin:7vh auto 0;padding:0 30px;}
+.windex{max-width:1180px;margin:0 auto;padding:0 30px;}
+.windex .jgroup{max-width:none;margin:12vh auto 0;padding:0;}
+.windex .jgroup:first-child{margin-top:9vh;}
+.windex .jgroup > h2{font-family:var(--body);font-weight:400;font-size:10.5px;letter-spacing:.34em;
+  text-transform:uppercase;color:var(--hunter);text-align:center;margin-bottom:0;}
+.wcols{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(34px,6vw,96px);align-items:start;}
+.wcol{display:flex;flex-direction:column;}
+.wcol:nth-child(2){padding-top:11vh;}
+.wcard{display:block;margin-top:11vh;transition:opacity .5s ease;}
+.wcol:first-child .wcard:first-child,.wcol:nth-child(2) .wcard:first-child{margin-top:6vh;}
+.wcard:hover{opacity:.74;}
 .wcard figure.media{aspect-ratio:4/5;}
-.wcard .t{display:block;margin-top:15px;font-family:var(--display);font-weight:400;font-size:19.5px;line-height:1.32;text-wrap:pretty;}
-.wcard .t em{font-style:italic;color:var(--ink-50);}
-.wcard .m{display:block;margin-top:7px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-50);}
-.jmore{display:inline-block;margin-top:30px;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--hunter);border-bottom:1px solid var(--ink-15);padding-bottom:5px;}
+.wcard .cap{display:block;text-align:center;margin-top:26px;}
+.wcard .r{display:block;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-50);}
+.wcard .n{display:block;margin-top:10px;font-family:var(--display);font-weight:400;
+  font-size:clamp(22px,2.5vw,30px);line-height:1.15;letter-spacing:.02em;text-transform:uppercase;}
+.wcard .t{display:block;margin-top:11px;font-size:13px;color:var(--ink-50);text-wrap:pretty;}
+.jmore{display:block;width:fit-content;margin:9vh auto 0;font-size:10.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--hunter);border-bottom:1px solid var(--ink-15);padding-bottom:6px;}
 .jmore:hover{border-bottom-color:var(--hunter);}
+@media(max-width:720px){.wcols{grid-template-columns:1fr;}.wcol:nth-child(2){padding-top:0;}}
+
+/* ---------- Galerie éditoriale d'un mariage ----------
+   Grille de douze colonnes. Chaque photographie reçoit une largeur et une
+   position selon son format et son rang, ce qui donne le rythme asymétrique
+   d'une double page de magazine. Le format d'origine est toujours respecté. */
+.gal{max-width:1180px;margin:9vh auto 0;padding:0 30px;
+  display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(40px,7vw,110px) 26px;align-items:start;}
+.gal figure.media{grid-column:span 6;overflow:visible;}
+.gal figure.f-full{grid-column:1 / -1;}
+.gal figure.f-wide-l{grid-column:1 / span 8;}
+.gal figure.f-wide-r{grid-column:5 / -1;}
+.gal figure.f-narrow-l{grid-column:1 / span 5;}
+.gal figure.f-narrow-r{grid-column:8 / -1;}
+.gal figure.f-half-l{grid-column:1 / span 6;}
+.gal figure.f-half-r{grid-column:7 / -1;}
+.gal figure.media figcaption{text-align:center;}
+@media(max-width:720px){
+  .gal{grid-template-columns:1fr;gap:44px 0;}
+  .gal figure.media{grid-column:1 / -1 !important;}
+}

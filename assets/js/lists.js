@@ -26,26 +26,31 @@
         if (!items.length) return;
         var group = el("div", "jgroup");
         group.appendChild(el("h2", null, esc(hub.name)));
-        /* Chaque commission est une carte : la photographie d'abord, puis le
-           titre descriptif (celui que le référencement lit) et la provenance
-           des mariés. Le titre reste intact, seule sa présentation change. */
-        var cards = el("div", "wcards");
-        items.forEach(function (c) {
+        /* Deux colonnes qui se remplissent en alternance : c'est ce décalage
+           qui donne la respiration d'une planche de magazine. Chaque figure
+           porte le format réel de sa photographie, donc rien ne saute pendant
+           le chargement et rien n'est recadré. */
+        var cols = el("div", "wcols");
+        var colA = el("div", "wcol"), colB = el("div", "wcol");
+        cols.appendChild(colA); cols.appendChild(colB);
+        items.forEach(function (c, i) {
           var a = el("a", "wcard");
           a.href = "/weddings/" + c.slug + "/";
           if (c.cover) {
             var fig = el("figure", "media");
             fig.setAttribute("data-media", c.cover);
             fig.setAttribute("data-nocaption", "");
+            if (c.coverRatio) fig.style.aspectRatio = c.coverRatio;
             a.appendChild(fig);
           }
-          var couple = noTodo(c.couple);
-          a.appendChild(el("span", "t", esc(c.title) + (couple ? " <em>&mdash; " + esc(couple) + "</em>" : "")));
-          var origin = c.origin && noTodo((c.origin.label || "").replace(/\s*\(TODO[^)]*\)/i, ""));
-          a.appendChild(el("span", "m", origin ? "From " + esc(origin) : esc(hub.name)));
-          cards.appendChild(a);
+          var cap = el("span", "cap");
+          cap.appendChild(el("span", "r", esc(noTodo(c.region) || hub.name)));
+          cap.appendChild(el("span", "n", esc(noTodo(c.couple) || c.title)));
+          cap.appendChild(el("span", "t", esc(c.title)));
+          a.appendChild(cap);
+          (i % 2 === 0 ? colA : colB).appendChild(a);
         });
-        group.appendChild(cards);
+        group.appendChild(cols);
         var more = el("a", "jmore", "All weddings in " + esc(hub.name) + " &rarr;");
         more.href = "/weddings/" + hub.slug + "/";
         group.appendChild(more);

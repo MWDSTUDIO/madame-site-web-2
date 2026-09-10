@@ -8,6 +8,7 @@
       "year": "2026",
       "venue": "Rosewood Castiglion del Bosco",
       "cover": "assets/img/weddings/sophie-gordon/01.jpg",
+      "coverRatio": "1200/1600",
       "region": "Tuscany",
       "hub": "tuscany",
       "origin": {
@@ -43,6 +44,7 @@
       "year": "TODO",
       "venue": "Paris",
       "cover": "assets/img/weddings/vintage-chanel-bride/01.jpg",
+      "coverRatio": "1067/1600",
       "region": "Paris",
       "hub": "paris",
       "origin": {
@@ -103,6 +105,7 @@
       "year": "TODO",
       "venue": "Shangri-La Paris",
       "cover": "assets/img/weddings/jessica-chris/02.jpg",
+      "coverRatio": "1024/1365",
       "region": "Paris",
       "hub": "paris",
       "origin": {
@@ -143,6 +146,7 @@
       "year": "2026",
       "venue": "Borgo Stomennano",
       "cover": "assets/img/weddings/claire-jack/03.jpg",
+      "coverRatio": "1376/1847",
       "region": "Tuscany",
       "hub": "tuscany",
       "origin": {
@@ -183,6 +187,7 @@
       "year": "TODO",
       "venue": "Hôtel d'Évreux",
       "cover": "assets/img/weddings/landen/02.jpg",
+      "coverRatio": "1632/2228",
       "region": "Paris",
       "hub": "paris",
       "origin": {
@@ -218,6 +223,7 @@
       "year": "TODO",
       "venue": "Private château, Burgundy",
       "cover": "assets/img/weddings/aimee-john/08.jpg",
+      "coverRatio": "1612/1072",
       "region": "Burgundy",
       "hub": "burgundy",
       "origin": {
@@ -257,6 +263,7 @@
       "year": "TODO",
       "venue": "Private villa, Rosewood Castiglion del Bosco",
       "cover": "assets/img/weddings/agatha/01.jpg",
+      "coverRatio": "1024/1365",
       "region": "Tuscany",
       "hub": "tuscany",
       "origin": {
@@ -291,6 +298,7 @@
       "year": "TODO",
       "venue": "Château Martinay (TODO confirm spelling: Martinet?)",
       "cover": "assets/img/weddings/chateau-martinay/03.jpg",
+      "coverRatio": "1334/2000",
       "region": "Provence",
       "hub": "provence",
       "origin": {
