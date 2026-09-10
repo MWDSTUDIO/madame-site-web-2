@@ -221,6 +221,7 @@ figure.media figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 1
 .article a:hover{border-color:var(--ink);}
 .article .lede{font-size:19px;color:var(--ink-50);margin-top:26px;text-wrap:pretty;}
 .article figure.media{aspect-ratio:16/10;margin-top:7vh;}
+.article figure.media.upright{aspect-ratio:4/5;max-width:540px;margin-left:auto;margin-right:auto;}
 .article blockquote{font-family:var(--display);font-style:italic;font-size:clamp(22px,2.8vw,30px);line-height:1.45;margin:64px auto 0;max-width:30ch;text-align:center;text-wrap:balance;}
 .next{max-width:720px;margin:12vh auto 0;padding:34px 28px 0;border-top:1px solid var(--ink-15);display:flex;justify-content:space-between;align-items:baseline;gap:20px;}
 .next a{font-family:var(--display);font-size:20px;border-bottom:1px solid transparent;transition:border-color .4s;display:inline-block;padding:10px 0;margin:-10px 0;}
